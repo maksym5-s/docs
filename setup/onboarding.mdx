@@ -1,0 +1,483 @@
+---
+title: "Onboarding Process"
+description: "Complete your business setup and agent configuration"
+icon: "rocket"
+---
+
+## Welcome to Recepta AI
+
+The onboarding process helps configure your AI voice agents with your business information, ensuring they provide accurate and personalized responses to your customers.
+
+<Note>
+  The onboarding process takes 5-10 minutes and significantly improves your AI agent's effectiveness from day one.
+</Note>
+
+## Onboarding Steps Overview
+
+<Steps>
+  <Step title="Business Information">
+    Set up your company profile and basic information
+  </Step>
+  <Step title="Voice Selection">
+    Choose the perfect AI voice for your brand
+  </Step>
+  <Step title="Customer Types">
+    Define your target audience and customer personas
+  </Step>
+  <Step title="FAQ Configuration">
+    Add frequently asked questions and responses
+  </Step>
+  <Step title="Business Hours">
+    Configure operating hours and after-hours handling
+  </Step>
+</Steps>
+
+## Step 1: Business Information Setup
+
+### Basic Company Details
+
+<CardGroup cols={2}>
+  <Card title="Company Information" icon="building">
+    **Required Fields**:
+    - Business Name
+    - Industry/Sector
+    - Brief Description
+    - Company Size
+  </Card>
+  <Card title="Contact Details" icon="phone">
+    **Required Fields**:
+    - Business Phone
+    - Website URL
+    - Physical Address
+    - Primary Email
+  </Card>
+</CardGroup>
+
+### Business Description Example
+
+```text
+Example Business Description:
+"We are Acme Consulting, a professional services firm specializing in business 
+strategy and growth consulting for small to medium-sized businesses. We help 
+companies optimize their operations, develop growth strategies, and improve 
+their market positioning. Our team of experienced consultants has been serving 
+the business community for over 15 years."
+```
+
+<Tip>
+  A detailed business description helps your AI agent introduce your company naturally and answer general questions about your services.
+</Tip>
+
+### Industry Selection
+
+Choose your industry to optimize AI responses:
+
+<AccordionGroup>
+  <Accordion title="Professional Services">
+    **Includes**: Consulting, Legal, Accounting, Marketing
+    - Emphasizes expertise and credentials
+    - Focuses on consultation and advice
+    - Appointment-based service model
+  </Accordion>
+  
+  <Accordion title="Healthcare">
+    **Includes**: Medical practices, Dental, Veterinary
+    - HIPAA-compliant conversation handling
+    - Appointment scheduling emphasis
+    - Emergency vs. routine call classification
+  </Accordion>
+  
+  <Accordion title="Home Services">
+    **Includes**: Plumbing, HVAC, Landscaping, Cleaning
+    - Urgent vs. scheduled service classification
+    - Location and availability-focused
+    - Estimate and quote request handling
+  </Accordion>
+  
+  <Accordion title="Retail/E-commerce">
+    **Includes**: Online stores, Boutiques, Specialty retail
+    - Product information and availability
+    - Order status and shipping inquiries
+    - Return and exchange policies
+  </Accordion>
+</AccordionGroup>
+
+## Step 2: Voice Selection
+
+### Available Voice Categories
+
+<Tabs>
+  <Tab title="Professional Voices">
+    **Best for**: Corporate, B2B, Professional Services
+    
+    **Characteristics**:
+    - Clear, authoritative tone
+    - Neutral accent
+    - Slower speaking pace
+    - Formal language style
+    
+    **Available Options**:
+    - Sarah (Female, Professional)
+    - Michael (Male, Professional)
+    - Amanda (Female, Executive)
+    - David (Male, Corporate)
+  </Tab>
+  
+  <Tab title="Friendly Voices">
+    **Best for**: Customer Service, Retail, B2C
+    
+    **Characteristics**:
+    - Warm, approachable tone
+    - Conversational style
+    - Moderate speaking pace
+    - Casual but professional language
+    
+    **Available Options**:
+    - Emma (Female, Friendly)
+    - Jake (Male, Casual)
+    - Sophia (Female, Warm)
+    - Alex (Male, Approachable)
+  </Tab>
+  
+  <Tab title="Technical Voices">
+    **Best for**: Tech Support, SaaS, Technical Services
+    
+    **Characteristics**:
+    - Patient, helpful tone
+    - Technical terminology comfort
+    - Clear pronunciation
+    - Step-by-step explanation style
+    
+    **Available Options**:
+    - Lisa (Female, Technical)
+    - Ryan (Male, Support)
+    - Maya (Female, Helper)
+    - Chris (Male, Technical)
+  </Tab>
+</Tabs>
+
+### Voice Testing
+
+Before finalizing your selection:
+
+1. **Listen to Samples**: Click play buttons to hear each voice
+2. **Test with Your Content**: Use the voice preview feature
+3. **Consider Your Audience**: Match voice to customer expectations
+4. **Brand Alignment**: Ensure voice reflects your brand personality
+
+<Warning>
+  Voice selection significantly impacts customer perception. Take time to choose the voice that best represents your brand.
+</Warning>
+
+## Step 3: Customer Type Configuration
+
+Define your target customers to help the AI understand who it's talking to:
+
+### Customer Personas
+
+<CardGroup cols={2}>
+  <Card title="New Customers" icon="user-plus">
+    **Characteristics**:
+    - First-time callers
+    - Need basic information
+    - May have general questions
+    - Require gentle guidance
+    
+    **AI Behavior**:
+    - Extra welcoming approach
+    - Provide comprehensive information
+    - Offer detailed explanations
+    - Be patient with questions
+  </Card>
+  <Card title="Existing Customers" icon="user-check">
+    **Characteristics**:
+    - Familiar with your services
+    - May need specific support
+    - Account or order inquiries
+    - Efficiency-focused
+    
+    **AI Behavior**:
+    - Streamlined interactions
+    - Quick problem resolution
+    - Access to account information
+    - Escalation when needed
+  </Card>
+</CardGroup>
+
+### Demographic Configuration
+
+```javascript
+// Example customer configuration
+{
+  "primary_demographic": {
+    "age_range": "25-55",
+    "tech_comfort": "moderate",
+    "communication_style": "professional_friendly",
+    "typical_needs": [
+      "service_information",
+      "appointment_scheduling", 
+      "support_requests"
+    ]
+  },
+  "secondary_demographic": {
+    "age_range": "55+",
+    "tech_comfort": "basic",
+    "communication_style": "patient_detailed",
+    "typical_needs": [
+      "basic_information",
+      "human_agent_requests"
+    ]
+  }
+}
+```
+
+## Step 4: FAQ Configuration
+
+### Common Question Categories
+
+Set up responses for frequently asked questions:
+
+<AccordionGroup>
+  <Accordion title="Business Information">
+    **Example Questions & Responses**:
+    
+    Q: "What are your business hours?"
+    A: "We're open Monday through Friday, 9 AM to 6 PM Eastern Time. We're closed weekends and major holidays."
+    
+    Q: "Where are you located?"
+    A: "Our main office is located at 123 Business Street in Downtown. We also offer virtual consultations for clients outside our immediate area."
+  </Accordion>
+  
+  <Accordion title="Services & Pricing">
+    **Example Questions & Responses**:
+    
+    Q: "What services do you offer?"
+    A: "We specialize in business strategy consulting, operational optimization, and growth planning. We work with small to medium-sized businesses across various industries."
+    
+    Q: "How much do your services cost?"
+    A: "Our pricing varies based on the scope and complexity of each project. I'd be happy to schedule a free consultation where we can discuss your specific needs and provide a detailed quote."
+  </Accordion>
+  
+  <Accordion title="Process & Logistics">
+    **Example Questions & Responses**:
+    
+    Q: "How long does the process take?"
+    A: "Project timelines vary depending on scope, but most consulting engagements range from 4-12 weeks. During your consultation, we'll provide a more specific timeline based on your needs."
+    
+    Q: "Do you offer remote services?"
+    A: "Yes, we offer both in-person and remote consulting services. Many of our clients prefer the flexibility of virtual meetings, and we're equipped to deliver the same high-quality service remotely."
+  </Accordion>
+</AccordionGroup>
+
+### FAQ Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Response Structure" icon="list">
+    **Good Response Format**:
+    - Direct answer first
+    - Additional context if needed
+    - Next step or call-to-action
+    - Offer for more information
+  </Card>
+  <Card title="Language Style" icon="message">
+    **Effective Communication**:
+    - Use conversational language
+    - Avoid jargon and technical terms
+    - Keep responses concise but complete
+    - Match your brand's tone
+  </Card>
+</CardGroup>
+
+## Step 5: Business Hours & Availability
+
+### Operating Hours Configuration
+
+<Tabs>
+  <Tab title="Standard Hours">
+    ```json
+    {
+      "monday": {"open": "09:00", "close": "17:00"},
+      "tuesday": {"open": "09:00", "close": "17:00"},
+      "wednesday": {"open": "09:00", "close": "17:00"},
+      "thursday": {"open": "09:00", "close": "17:00"},
+      "friday": {"open": "09:00", "close": "17:00"},
+      "saturday": "closed",
+      "sunday": "closed",
+      "timezone": "America/New_York"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="Extended Hours">
+    ```json
+    {
+      "monday": {"open": "08:00", "close": "20:00"},
+      "tuesday": {"open": "08:00", "close": "20:00"},
+      "wednesday": {"open": "08:00", "close": "20:00"},
+      "thursday": {"open": "08:00", "close": "20:00"},
+      "friday": {"open": "08:00", "close": "20:00"},
+      "saturday": {"open": "10:00", "close": "16:00"},
+      "sunday": "closed",
+      "timezone": "America/New_York"
+    }
+    ```
+  </Tab>
+  
+  <Tab title="24/7 Service">
+    ```json
+    {
+      "all_days": {"open": "00:00", "close": "23:59"},
+      "emergency_hours": true,
+      "after_hours_message": "This is our 24/7 emergency line...",
+      "timezone": "America/New_York"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+### After-Hours Handling
+
+Configure what happens when customers call outside business hours:
+
+<AccordionGroup>
+  <Accordion title="Take Messages">
+    **Configuration**:
+    - AI explains business is closed
+    - Offers to take detailed message
+    - Promises callback within specified timeframe
+    - Captures contact information
+    
+    **Example Message**:
+    "Thank you for calling. Our office is currently closed, but I'd be happy to take a message and have someone call you back first thing in the morning."
+  </Accordion>
+  
+  <Accordion title="Emergency Handling">
+    **Configuration**:
+    - Ask if this is an emergency
+    - Provide emergency contact information
+    - Offer to schedule for next business day
+    - Take message for urgent but non-emergency items
+    
+    **Example Message**:
+    "I understand you're calling outside our normal hours. Is this an emergency that requires immediate attention?"
+  </Accordion>
+  
+  <Accordion title="Information Only">
+    **Configuration**:
+    - Provide basic business information
+    - Share hours and contact details
+    - Offer to schedule callback
+    - No message taking capability
+    
+    **Example Message**:
+    "Our office is currently closed. We're open Monday through Friday, 9 AM to 6 PM. Would you like me to help you schedule a callback during business hours?"
+  </Accordion>
+</AccordionGroup>
+
+## Step 6: Review and Launch
+
+### Pre-Launch Checklist
+
+<AccordionGroup>
+  <Accordion title="Business Information">
+    - [ ] Company name and description are accurate
+    - [ ] Contact information is up-to-date
+    - [ ] Industry selection matches your business
+    - [ ] Services are clearly described
+  </Accordion>
+  
+  <Accordion title="Voice and Communication">
+    - [ ] Selected voice matches brand personality
+    - [ ] Speaking pace is appropriate
+    - [ ] Language style fits target audience
+    - [ ] Test calls sound natural
+  </Accordion>
+  
+  <Accordion title="Customer Configuration">
+    - [ ] Customer types are well-defined
+    - [ ] FAQs cover common questions
+    - [ ] Responses are accurate and helpful
+    - [ ] Escalation procedures are clear
+  </Accordion>
+  
+  <Accordion title="Operations">
+    - [ ] Business hours are correct
+    - [ ] After-hours handling is configured
+    - [ ] Emergency procedures are defined
+    - [ ] Time zone is accurate
+  </Accordion>
+</AccordionGroup>
+
+### Test Your Configuration
+
+Before going live, conduct thorough testing:
+
+<Steps>
+  <Step title="Make Test Calls">
+    Use the "Test Call" feature to simulate customer interactions
+  </Step>
+  <Step title="Try Different Scenarios">
+    Test various types of customer inquiries and edge cases  
+  </Step>
+  <Step title="Verify Information">
+    Confirm all information provided by the AI is accurate
+  </Step>
+  <Step title="Check Voice Quality">
+    Ensure voice sounds natural and professional
+  </Step>
+</Steps>
+
+## Onboarding Completion
+
+### What Happens Next
+
+Once onboarding is complete:
+
+1. **AI Agent Creation**: Your first agent is automatically created
+2. **Phone Number Assignment**: Get a dedicated business number
+3. **Knowledge Base Setup**: Your information is processed and indexed
+4. **Testing Phase**: 24-hour testing period to ensure everything works
+5. **Go Live**: Agent becomes active and ready to handle calls
+
+### Post-Onboarding Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Agent Management"
+    icon="settings"
+    href="/agents/management"
+  >
+    Learn to manage and optimize your agents
+  </Card>
+  <Card
+    title="Analytics Dashboard"
+    icon="chart-line"
+    href="/features/analytics"
+  >
+    Monitor performance and improve over time
+  </Card>
+  <Card
+    title="Knowledge Base"
+    icon="book-open"
+    href="/features/knowledge-base"
+  >
+    Add more information and train your agents
+  </Card>
+  <Card
+    title="Chat Widget Setup"
+    icon="message-circle"
+    href="/chat-widget/setup"
+  >
+    Add intelligent chat to your website
+  </Card>
+</CardGroup>
+
+## Need Help?
+
+<Note>
+  Our support team is available to help with onboarding questions. Don't hesitate to reach out at support@recepta.ai or use the in-app chat.
+</Note>
+
+---
+
+**Congratulations!** Your AI voice agent is now configured with your business information and ready to provide excellent customer service.

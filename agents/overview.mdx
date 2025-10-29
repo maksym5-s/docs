@@ -1,0 +1,261 @@
+---
+title: "AI Voice Agents Overview"
+description: "Understanding AI Voice Agents in Recepta AI"
+icon: "robot"
+---
+
+## What are AI Voice Agents?
+
+AI Voice Agents are intelligent conversational systems that can handle phone calls on behalf of your business. They use advanced natural language processing and speech synthesis to provide natural, human-like conversations with your customers.
+
+<CardGroup cols={2}>
+  <Card title="Always Available" icon="clock">
+    Your AI agents work 24/7, ensuring customers can reach you anytime
+  </Card>
+  <Card title="Consistent Quality" icon="check-circle">
+    Every interaction follows your guidelines with consistent quality
+  </Card>
+  <Card title="Scalable" icon="chart-line">
+    Handle hundreds of calls simultaneously without additional cost
+  </Card>
+  <Card title="Cost-Effective" icon="dollar-sign">
+    Reduce operational costs while maintaining high service quality
+  </Card>
+</CardGroup>
+
+## How AI Voice Agents Work
+
+<Steps>
+  <Step title="Call Reception">
+    When a customer calls your business number, the AI agent answers immediately with a personalized greeting based on your configuration.
+  </Step>
+  <Step title="Intent Recognition">
+    The agent uses natural language understanding to identify what the caller needs - whether it's information, support, or a specific service.
+  </Step>
+  <Step title="Response Generation">
+    Based on your business knowledge and trained responses, the agent provides accurate, helpful information in a natural conversational flow.
+  </Step>
+  <Step title="Action Execution">
+    The agent can perform actions like scheduling appointments, taking messages, transferring calls, or collecting contact information.
+  </Step>
+  <Step title="Human Handoff">
+    When the AI agent encounters complex situations beyond its capabilities, it can seamlessly transfer the call to a human agent for personalized assistance.
+  </Step>
+</Steps>
+
+## Agent Types and Use Cases
+
+### Customer Support Agents
+Handle common customer questions, troubleshooting, and support requests.
+
+```javascript
+// Example configuration for support agent
+{
+  "type": "customer_support",
+  "capabilities": [
+    "Answer FAQs",
+    "Troubleshoot issues",
+    "Transfer to specialists",
+    "Take messages"
+  ],
+  "knowledge_base": "support_docs",
+  "escalation_rules": "transfer_after_3_attempts"
+}
+```
+
+**Best for**: Tech companies, SaaS businesses, e-commerce stores
+
+### Sales & Lead Qualification Agents
+Qualify leads, provide product information, and schedule sales calls.
+
+```javascript
+// Example configuration for sales agent
+{
+  "type": "sales_qualification",
+  "capabilities": [
+    "Product information",
+    "Lead qualification",
+    "Appointment scheduling",
+    "Demo booking"
+  ],
+  "qualification_criteria": ["budget", "timeline", "authority"],
+  "booking_integration": "calendly_api"
+}
+```
+
+**Best for**: B2B services, consultancies, real estate, automotive
+
+### Appointment Scheduling Agents
+Handle appointment bookings, cancellations, and rescheduling.
+
+```javascript
+// Example configuration for scheduling agent
+{
+  "type": "appointment_scheduling",
+  "capabilities": [
+    "Check availability",
+    "Book appointments",
+    "Send confirmations",
+    "Handle reschedules"
+  ],
+  "calendar_integration": "google_calendar",
+  "business_hours": "9am-6pm EST"
+}
+```
+
+**Best for**: Healthcare, beauty salons, professional services, home services
+
+## Agent Status Types
+
+<AccordionGroup>
+  <Accordion title="Active" icon="check-circle">
+    **Status**: Ready to handle calls
+    - Agent is live and answering calls
+    - All configurations are properly synced
+    - Performance metrics being tracked
+  </Accordion>
+  
+  <Accordion title="Training" icon="brain">
+    **Status**: Learning from new data
+    - Agent is processing knowledge base updates
+    - New prompts or configurations being applied
+    - May take 2-5 minutes to complete
+  </Accordion>
+  
+  <Accordion title="Synced" icon="refresh">
+    **Status**: Successfully updated
+    - Recent changes have been applied
+    - Agent is ready to handle calls with new configuration
+    - All integrations are working properly
+  </Accordion>
+  
+  <Accordion title="Failed" icon="x-circle">
+    **Status**: Configuration error
+    - There's an issue with agent setup
+    - May be due to invalid prompts or missing configurations
+    - Check settings and try resyncing
+  </Accordion>
+  
+  <Accordion title="Inactive" icon="pause-circle">
+    **Status**: Temporarily disabled
+    - Agent is not answering calls
+    - Can be manually activated when ready
+    - Useful for maintenance or updates
+  </Accordion>
+</AccordionGroup>
+
+## Key Features
+
+### Multi-Language Support
+Support customers in their preferred language:
+- **English** (US, UK, Australian accents)
+- **Spanish** (Latin American, European)
+- **French** (French, Canadian)
+- **German**
+- **Italian**
+- **Portuguese**
+- And more languages added regularly
+
+### Voice Customization
+Choose the perfect voice for your brand:
+- **Professional voices** for business settings
+- **Friendly voices** for customer service
+- **Authoritative voices** for technical support
+- **Custom voice cloning** available on enterprise plans
+
+### Intelligence Features
+- **Context awareness**: Remembers conversation history
+- **Sentiment analysis**: Adapts tone based on caller mood
+- **Knowledge base integration**: Access to your business documents
+- **Real-time learning**: Improves responses based on interactions
+- **Smart escalation**: Automatically recognizes when to transfer to human agents
+
+## Performance Metrics
+
+Track your agents' performance with comprehensive analytics:
+
+<CardGroup cols={2}>
+  <Card title="Call Volume" icon="phone">
+    - Total calls handled
+    - Peak calling hours
+    - Call duration averages
+    - Abandoned call rates
+  </Card>
+  <Card title="Quality Metrics" icon="star">
+    - Customer satisfaction scores
+    - Resolution rates
+    - Transfer rates
+    - Response accuracy
+  </Card>
+  <Card title="Business Impact" icon="trending-up">
+    - Lead conversion rates
+    - Appointment bookings
+    - Cost savings analysis
+    - Revenue attribution
+  </Card>
+  <Card title="Technical Health" icon="activity">
+    - Uptime monitoring
+    - Response times
+    - Error rates
+    - Integration status
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+<Tip>
+  **Start Simple**: Begin with basic customer service functions and gradually add complexity as you learn what works best for your business.
+</Tip>
+
+### Prompt Engineering
+- Use clear, specific instructions
+- Include examples of desired responses
+- Define escalation scenarios
+- Test with various customer types
+
+### Knowledge Base Management
+- Keep information up-to-date
+- Use clear, conversational language
+- Organize by common customer questions
+- Regular review and updates
+
+### Performance Optimization
+- Monitor call transcripts regularly
+- Adjust prompts based on real interactions
+- Update knowledge base with new FAQs
+- Track customer feedback and satisfaction
+
+## Next Steps
+
+Ready to create your first AI Voice Agent?
+
+<CardGroup cols={2}>
+  <Card
+    title="Create Your First Agent"
+    icon="plus-circle"
+    href="/agents/creation"
+  >
+    Step-by-step guide to setting up your first AI voice agent
+  </Card>
+  <Card
+    title="Configuration Guide"
+    icon="settings"
+    href="/agents/configuration"
+  >
+    Learn how to configure and optimize your agents
+  </Card>
+  <Card
+    title="Management Dashboard"
+    icon="chart-bar"
+    href="/agents/management"
+  >
+    Understand the agent management interface and features
+  </Card>
+  <Card
+    title="Integration Options"
+    icon="plug"
+    href="/advanced/integrations"
+  >
+    Connect your agents with existing business tools
+  </Card>
+</CardGroup>

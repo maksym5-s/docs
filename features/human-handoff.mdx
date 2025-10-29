@@ -1,0 +1,273 @@
+---
+title: "Human Handoff"
+description: "Seamless live transfer from AI agents to human operators when complex assistance is needed"
+---
+
+## Overview
+
+While Recepta AI's intelligent voice agents handle the majority of customer interactions autonomously, we understand that some situations require the human touch. Our Human Handoff feature provides seamless live transfer capabilities, ensuring your customers always receive the best possible service when AI assistance reaches its limits.
+
+<CardGroup cols={2}>
+  <Card title="Seamless Transition" icon="arrow-right">
+    Smooth transfer from AI to human agents without dropping the call
+  </Card>
+  <Card title="Context Preservation" icon="memory">
+    Full conversation history and customer data passed to human agents
+  </Card>
+  <Card title="Smart Detection" icon="brain">
+    AI automatically recognizes when human intervention is needed
+  </Card>
+  <Card title="Fallback Protection" icon="shield">
+    Multiple escalation options ensure customers are never left stranded
+  </Card>
+</CardGroup>
+
+## How Human Handoff Works
+
+<Steps>
+  <Step title="Escalation Trigger">
+    The AI agent identifies situations requiring human assistance through various triggers:
+    - Complex technical issues beyond knowledge base
+    - Customer frustration or dissatisfaction
+    - Requests for manager or supervisor
+    - Situations requiring human empathy or judgment
+  </Step>
+  <Step title="Preparation & Context">
+    Before transferring, the AI agent:
+    - Summarizes the conversation for the human agent
+    - Collects all relevant customer information
+    - Identifies the specific reason for escalation
+    - Prepares handoff documentation
+  </Step>
+  <Step title="Live Transfer">
+    The system performs a warm transfer:
+    - Human agent receives full context
+    - Customer is smoothly transitioned
+    - AI agent provides introduction if needed
+    - Call continues without interruption
+  </Step>
+  <Step title="Human Interaction">
+    Human agent takes over with:
+    - Complete conversation history
+    - Customer profile and preferences
+    - Previous interaction records
+    - Specific escalation reason
+  </Step>
+</Steps>
+
+## Escalation Triggers
+
+### Automatic Triggers
+The AI agent automatically escalates calls when it detects:
+
+<AccordionGroup>
+  <Accordion title="Complex Technical Issues" icon="tools">
+    - Problems not covered in the knowledge base
+    - Multi-step troubleshooting requirements
+    - Integration or system configuration issues
+    - Technical questions requiring specialist knowledge
+  </Accordion>
+
+  <Accordion title="Customer Frustration" icon="face-frown">
+    - Negative sentiment detection
+    - Repeated failed attempts to resolve issues
+    - Customer expressing dissatisfaction
+    - Requests to "speak to a human"
+  </Accordion>
+
+  <Accordion title="Policy & Authority Requests" icon="user-tie">
+    - Requests to speak with a manager
+    - Policy exceptions or special cases
+    - Billing disputes or refund requests
+    - Complaints requiring management attention
+  </Accordion>
+
+  <Accordion title="Sensitive Situations" icon="heart">
+    - Emergency situations
+    - Personal or emotional issues
+    - Grief or distress situations
+    - Cases requiring human empathy
+  </Accordion>
+</AccordionGroup>
+
+### Manual Triggers
+Human agents can also be reached through:
+- **Customer Request**: Direct request to speak with a human
+- **Keyword Detection**: Specific phrases like "human", "representative", "manager"
+- **Agent Uncertainty**: When AI confidence levels drop below threshold
+- **Business Hours**: Outside hours escalation to on-call support
+
+## Configuration Options
+
+### Escalation Rules
+Configure when and how escalations occur:
+
+```javascript
+// Example escalation configuration
+{
+  "escalation_triggers": {
+    "sentiment_threshold": -0.5,
+    "confidence_threshold": 0.7,
+    "keywords": ["human", "manager", "supervisor", "complaint"],
+    "max_attempts": 3,
+    "frustration_indicators": ["repeat", "angry", "upset"]
+  },
+  "business_rules": {
+    "automatic_escalation": true,
+    "escalation_delay": 5,
+    "context_summary": true,
+    "warm_transfer": true
+  }
+}
+```
+
+### Human Agent Availability
+Set up your human agent availability:
+
+<CardGroup cols={2}>
+  <Card title="Business Hours" icon="clock">
+    - Define operational hours
+    - Set timezone preferences
+    - Configure holiday schedules
+    - Manage shift patterns
+  </Card>
+  <Card title="Agent Pools" icon="users">
+    - Multiple agent groups
+    - Skill-based routing
+    - Department specialization
+    - Escalation hierarchies
+  </Card>
+  <Card title="Fallback Options" icon="life-ring">
+    - Voicemail when unavailable
+    - Callback scheduling
+    - Emergency contact protocols
+    - After-hours messaging
+  </Card>
+  <Card title="Load Balancing" icon="scale">
+    - Distribute calls evenly
+    - Queue management
+    - Agent capacity monitoring
+    - Priority routing
+  </Card>
+</CardGroup>
+
+### Transfer Settings
+Customize the handoff experience:
+
+- **Introduction Script**: What the AI says during transfer
+- **Context Format**: How information is presented to human agents
+- **Transfer Delay**: Time between detection and transfer
+- **Confirmation**: Whether to confirm transfer with customer
+- **Recording**: Continue call recording during human interaction
+
+## Integration Setup
+
+### Human Agent Systems
+Recepta AI integrates with popular human agent platforms:
+
+- **Traditional Call Centers**: SIP/PBX integration
+- **Cloud Contact Centers**: API-based connections
+- **CRM Systems**: Salesforce, HubSpot, Zendesk integration
+- **Communication Platforms**: Slack, Microsoft Teams, Discord
+
+### API Configuration
+Set up handoff endpoints for your systems:
+
+```javascript
+// Webhook configuration for human handoff
+{
+  "handoff_webhook": "https://your-system.com/api/handoff",
+  "authentication": "bearer_token",
+  "data_format": "json",
+  "include_recording": true,
+  "include_transcript": true
+}
+```
+
+## Best Practices
+
+### Training Human Agents
+Ensure your human agents are prepared:
+
+<Tip>
+  **Quick Onboarding**: Human agents should be able to quickly understand the context and continue the conversation naturally.
+</Tip>
+
+- **Context Review**: Train agents to quickly scan conversation summaries
+- **System Familiarity**: Ensure agents understand your AI agent capabilities
+- **Escalation Protocols**: Clear procedures for different escalation types
+- **Customer Handoff**: Smooth transition techniques and language
+
+### Optimizing Escalation Rules
+Fine-tune your escalation settings:
+
+- **Monitor Patterns**: Track common escalation reasons
+- **Adjust Thresholds**: Optimize confidence and sentiment triggers
+- **Update Knowledge Base**: Reduce escalations by improving AI knowledge
+- **Feedback Loop**: Use human agent feedback to improve AI responses
+
+### Customer Experience
+Maintain service quality during transfers:
+
+- **Transparent Communication**: Clearly explain the transfer process
+- **Minimize Wait Time**: Keep transfer delays short
+- **Preserve Context**: Ensure no information is lost
+- **Follow-up**: Confirm resolution after human interaction
+
+## Analytics & Monitoring
+
+### Handoff Metrics
+Track the performance of your human handoff system:
+
+<CardGroup cols={2}>
+  <Card title="Escalation Rate" icon="percentage">
+    - Percentage of calls escalated
+    - Escalation trends over time
+    - Peak escalation periods
+    - Success rate improvements
+  </Card>
+  <Card title="Transfer Quality" icon="star">
+    - Customer satisfaction post-transfer
+    - Resolution rates
+    - Transfer success rates
+    - Context preservation accuracy
+  </Card>
+  <Card title="Response Times" icon="stopwatch">
+    - Time to human agent pickup
+    - Queue wait times
+    - Transfer completion time
+    - Overall resolution time
+  </Card>
+  <Card title="Cost Analysis" icon="calculator">
+    - Human agent utilization
+    - Cost per escalated call
+    - ROI of AI vs human handling
+    - Resource optimization metrics
+  </Card>
+</CardGroup>
+
+### Reporting Features
+- **Escalation Reports**: Detailed analysis of why calls were escalated
+- **Performance Dashboards**: Real-time monitoring of handoff success
+- **Quality Scoring**: Rate the effectiveness of human handoffs
+- **Trend Analysis**: Identify patterns and improvement opportunities
+
+## Troubleshooting
+
+### Common Issues
+- **Failed Transfers**: Check human agent availability and system connectivity
+- **Context Loss**: Verify webhook configuration and data format
+- **Long Wait Times**: Review agent capacity and queue management
+- **False Escalations**: Adjust AI confidence thresholds and triggers
+
+### Support & Configuration
+Need help setting up human handoff for your specific system? Our support team can assist with:
+
+- Custom integration development
+- Escalation rule optimization
+- Agent training and onboarding
+- Performance monitoring setup
+
+---
+
+*With Human Handoff, you get the best of both worlds: efficient AI automation with the assurance of human expertise when needed.*

@@ -1,0 +1,551 @@
+---
+title: "How to Forward Calls from Google Voice to Recepta AI"
+description: "Complete guide to forwarding your Google Voice calls to Recepta AI Voice Agent"
+---
+
+## Overview
+
+Google Voice users can set up call forwarding to enable your Recepta AI voice agent to answer incoming calls. This guide walks you through the complete setup process, from obtaining your Recepta AI phone number to configuring Google Voice's call routing, including important considerations unique to Google Voice.
+
+## Getting Your Recepta AI Phone Number
+
+Before configuring Google Voice, you'll need to obtain your dedicated Recepta AI phone number.
+
+<Steps>
+  <Step title="Access Your Dashboard">
+    Navigate to your Recepta AI dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
+  </Step>
+
+  <Step title="Locate Your Phone Number">
+    Your Recepta AI phone number will be displayed prominently in the dashboard. Copy this number as you'll need it for the Google Voice configuration.
+
+    <img src="/images/phonenumber.png" alt="Recepta AI Phone Number Location" />
+  </Step>
+
+  <Step title="Complete Agent Setup">
+    Ensure you have completed setting up your AI voice agent's call instructions and configuration before proceeding with call forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Keep your Recepta AI phone number handy - you'll need to enter it into Google Voice's forwarding settings.
+</Note>
+
+---
+
+## Configuring Call Forwarding in Google Voice
+
+Google Voice's interface may change over time. For the most current instructions, we recommend consulting Google Voice's official documentation.
+
+### Basic Setup Steps
+
+<Steps>
+  <Step title="Access Google Voice Settings">
+    Log into your Google Voice account and access Settings
+  </Step>
+
+  <Step title="Navigate to Call Forwarding">
+    Find the call forwarding or linked numbers section (typically under "Calls" menu)
+  </Step>
+
+  <Step title="Add Recepta AI Number">
+    Add your Recepta AI phone number as a forwarding destination
+
+    Follow Google's verification process to confirm the number
+  </Step>
+
+  <Step title="Disable Other Devices">
+    **Critical**: Ensure that all other devices are switched off in your Google Voice Settings
+
+    <Warning>
+    Your Recepta AI number should be the ONLY enabled forwarding destination. Otherwise, calls may ring multiple devices.
+    </Warning>
+  </Step>
+
+  <Step title="Save Configuration">
+    Save your settings and verify the configuration
+  </Step>
+
+  <Step title="Test Your Setup">
+    Make a test call to verify calls are routing correctly to your Recepta AI voice agent
+  </Step>
+</Steps>
+
+<Tip>
+Google Voice allows you to link multiple phone numbers. For best results with Recepta AI, disable all other linked devices and only enable forwarding to your Recepta AI number.
+</Tip>
+
+---
+
+## Important Google Voice Limitations
+
+### Sequential Ringing Not Natively Supported
+
+<Warning>
+Google Voice does not natively support ringing your personal cell phone for 5-8 seconds before forwarding to Recepta AI.
+</Warning>
+
+If you want this functionality, you have two options:
+
+#### Option 1: Direct Forwarding (Recommended)
+
+Simply forward all Google Voice calls directly to Recepta AI. This ensures:
+- Instant call pickup
+- No caller waiting time
+- Most reliable configuration
+- No missed calls
+
+#### Option 2: Carrier Conditional Forwarding (Advanced)
+
+Use a workaround with your cell phone carrier's conditional call forwarding:
+
+<Steps>
+  <Step title="Forward Google Voice to Cell">
+    Configure Google Voice to forward all calls to your cell phone
+  </Step>
+
+  <Step title="Set Up Carrier Forwarding">
+    Configure conditional call forwarding with your cell carrier:
+    - Forward on busy: To Recepta AI
+    - Forward on no answer: To Recepta AI (after 5-8 seconds)
+
+    Contact your carrier for specific dial codes and setup instructions
+  </Step>
+
+  <Step title="Test Both Scenarios">
+    Test when you answer and when you don't to verify proper behavior
+  </Step>
+</Steps>
+
+<Note>
+Conditional call forwarding availability varies by carrier. Not all carriers support this feature.
+</Note>
+
+---
+
+## Call Forwarding Strategies
+
+<Accordion title="Direct Forwarding (Recommended for Google Voice)">
+  **Best for**: Most Google Voice users
+
+  **Setup**: Forward all calls directly to Recepta AI phone number
+
+  **Benefits**:
+  - No missed calls
+  - Instant pickup (no wait time)
+  - Simplest configuration
+  - Most reliable
+  - Works with all carriers
+  - No complex workarounds needed
+
+  **Considerations**:
+  - No personal screening option
+  - All calls go to AI first
+</Accordion>
+
+<Accordion title="Carrier Conditional Forwarding (Advanced)">
+  **Best for**: Users who want personal screening and have compatible carriers
+
+  **Setup**: Google Voice → Cell Phone → (Conditional) → Recepta AI
+
+  **Benefits**:
+  - Option for personal pickup
+  - AI handles missed calls
+  - Flexible coverage
+
+  **Considerations**:
+  - Requires carrier support
+  - More complex setup
+  - Additional points of failure
+  - Carrier-dependent reliability
+
+  <Warning>
+  Not all cell phone carriers support conditional call forwarding. Contact your carrier to verify before attempting this configuration.
+  </Warning>
+</Accordion>
+
+---
+
+## Device Management in Google Voice
+
+### Disabling Other Devices
+
+For Recepta AI to reliably receive calls, you must disable other forwarding destinations:
+
+<Steps>
+  <Step title="Access Calls Settings">
+    In Google Voice, go to Settings → Calls
+  </Step>
+
+  <Step title="View Linked Numbers">
+    Find the section showing all linked phone numbers and devices
+  </Step>
+
+  <Step title="Disable All Except Recepta AI">
+    Turn off all devices/numbers except your Recepta AI forwarding number
+  </Step>
+
+  <Step title="Verify Configuration">
+    Confirm that only Recepta AI number is enabled
+  </Step>
+</Steps>
+
+<Warning>
+If multiple devices are enabled, Google Voice may ring them all simultaneously or in sequence, potentially preventing Recepta AI from answering calls reliably.
+</Warning>
+
+---
+
+## Important Configuration Tips
+
+### Preventing Infinite Call Loops
+
+<Warning>
+**Avoid Infinite Loops**: If your Recepta AI agent has you as a transfer destination, the transfer number **must be different** from your main Google Voice number. Otherwise, calls will get stuck in an infinite loop.
+</Warning>
+
+**Safe Configuration Example**:
+- Google Voice Number: Forwards to Recepta AI → ✅ Correct
+- AI Agent Transfer Destination: Your direct cell phone → ✅ Correct
+- ❌ **WRONG**: AI transfers back to Google Voice number (creates loop)
+
+**Why This Matters**:
+If calls forward from Google Voice → Recepta AI → back to Google Voice, they'll loop forever, creating a poor customer experience.
+
+### Google Voice Voicemail Settings
+
+<Steps>
+  <Step title="Access Voicemail Settings">
+    In Google Voice Settings, find voicemail options
+  </Step>
+
+  <Step title="Adjust or Disable Voicemail">
+    Consider disabling voicemail or extending the ring time before voicemail
+
+    This ensures Recepta AI has time to answer before Google Voice voicemail triggers
+  </Step>
+</Steps>
+
+---
+
+## Advanced Configuration
+
+### Business Use Cases
+
+<CardGroup cols={2}>
+  <Card title="Solo Professional" icon="user">
+    **Setup**: Direct forwarding to AI
+
+    **Use Case**: Screen calls, schedule appointments, answer FAQs while you focus on work
+  </Card>
+
+  <Card title="Side Business" icon="briefcase">
+    **Setup**: Separate Google Voice number → AI
+
+    **Use Case**: Keep business calls separate, AI handles business inquiries 24/7
+  </Card>
+
+  <Card title="Customer Service" icon="headset">
+    **Setup**: Direct forwarding to AI
+
+    **Use Case**: AI handles support calls, schedules callbacks, answers common questions
+  </Card>
+
+  <Card title="Appointment Scheduling" icon="calendar-days">
+    **Setup**: Direct forwarding to AI
+
+    **Use Case**: AI books appointments automatically, sends confirmations
+  </Card>
+</CardGroup>
+
+### Integration Tips
+
+<Tip>
+Google Voice is excellent for separating business and personal lines. Use a dedicated Google Voice number for business, forward it to Recepta AI, and keep your personal cell number private.
+</Tip>
+
+**Benefits of This Approach**:
+- Maintain privacy of personal number
+- Professional business presence
+- AI handles all business calls
+- Easy to track business call metrics
+- Can disable business calls during vacation
+
+---
+
+## Testing Your Configuration
+
+Thorough testing ensures your setup works correctly:
+
+<Steps>
+  <Step title="Verify Device Settings">
+    Confirm only Recepta AI number is enabled in Google Voice
+  </Step>
+
+  <Step title="Test Basic Forwarding">
+    Call your Google Voice number to verify it forwards to Recepta AI
+  </Step>
+
+  <Step title="Test From Multiple Numbers">
+    Call from different phone numbers to test various scenarios
+  </Step>
+
+  <Step title="Test Call Transfers">
+    If configured, verify AI agent transfers work without creating loops
+  </Step>
+
+  <Step title="Check Call Quality">
+    Verify audio quality is clear and acceptable
+  </Step>
+
+  <Step title="Review Call Logs">
+    Check logs in both Google Voice and Recepta AI dashboards
+  </Step>
+
+  <Step title="Test Voicemail Behavior">
+    Verify calls don't go to Google Voice voicemail unintentionally
+  </Step>
+</Steps>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Calls Not Reaching Recepta AI">
+    **Diagnostic Steps**:
+    - Verify correct Recepta AI phone number is entered in Google Voice
+    - Check that Recepta AI is the ONLY enabled forwarding destination
+    - Ensure other devices/numbers are disabled in Google Voice
+    - Verify your Recepta AI agent is configured and active
+    - Make test call and review logs in both systems
+
+    **Common Causes**:
+    - Other devices still enabled in Google Voice
+    - Typo in Recepta AI phone number
+    - Number not verified in Google Voice
+    - AI agent not active or misconfigured
+  </Accordion>
+
+  <Accordion title="Calls Going to Google Voice Voicemail">
+    **Solutions**:
+    - Extend ring time before voicemail triggers
+    - Ensure Recepta AI number is enabled in Google Voice
+    - Check that forwarding is active
+    - Verify Recepta AI agent is answering calls promptly
+    - Consider disabling Google Voice voicemail
+
+    **Why This Happens**:
+    Google Voice voicemail may trigger if the forwarding number doesn't answer quickly enough
+  </Accordion>
+
+  <Accordion title="Multiple Devices Ringing">
+    **Solution**:
+    - Go to Google Voice Settings → Calls
+    - Disable ALL devices except Recepta AI number
+    - Save settings and test again
+
+    **This is the most common Google Voice issue** with AI forwarding.
+  </Accordion>
+
+  <Accordion title="Infinite Call Loops">
+    **Solutions**:
+    - Use different phone numbers for transfers
+    - Never forward Google Voice number to itself
+    - Configure AI transfers to direct lines (cell/desk phones)
+    - Review complete call flow logic
+
+    **Example Safe Setup**:
+    ```
+    Caller → Google Voice → Recepta AI → Transfer to Cell Phone
+    (Each step uses a different number)
+    ```
+  </Accordion>
+
+  <Accordion title="Conditional Forwarding Not Working">
+    **Solutions**:
+    - Contact your cell phone carrier to verify support
+    - Check forwarding codes are entered correctly
+    - Test both "busy" and "no answer" scenarios
+    - Consider using direct Google Voice forwarding instead
+    - Some carriers don't support this feature reliably
+  </Accordion>
+
+  <Accordion title="Call Quality Issues">
+    **Solutions**:
+    - Verify stable internet connection
+    - Check Google Voice service status
+    - Review call logs for error patterns
+    - Test from different locations/networks
+    - Contact Recepta AI support if issues persist
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Monitoring and Analytics
+
+### Tracking Performance
+
+<CardGroup cols={2}>
+  <Card title="Google Voice History" icon="clock-rotate-left">
+    View call history and patterns in Google Voice dashboard
+  </Card>
+
+  <Card title="Recepta AI Dashboard" icon="gauge-high" href="/features/analytics">
+    Track AI performance, conversation quality, and outcomes
+  </Card>
+
+  <Card title="Call Logs" icon="rectangle-list" href="/features/call-logs">
+    Review detailed logs from both systems to identify issues
+  </Card>
+
+  <Card title="Quality Metrics" icon="star">
+    Measure customer satisfaction and agent performance
+  </Card>
+</CardGroup>
+
+### Key Metrics to Monitor
+
+- **Call Answer Rate**: Percentage of calls successfully handled
+- **Voicemail Rate**: Ensure calls aren't going to Google Voice voicemail
+- **Transfer Rate**: How often AI transfers to humans
+- **Call Duration**: Length of AI conversations
+- **Customer Satisfaction**: Ratings and feedback
+- **Call Completion**: Successful end-to-end call handling
+
+---
+
+## Best Practices for Google Voice + Recepta AI
+
+<CardGroup cols={2}>
+  <Card title="Single Device Only" icon="mobile">
+    Only enable Recepta AI number in Google Voice - disable all others
+  </Card>
+
+  <Card title="Verify Number" icon="check-circle">
+    Complete Google Voice verification for Recepta AI number
+  </Card>
+
+  <Card title="Disable Voicemail" icon="voicemail">
+    Consider disabling or extending voicemail timer
+  </Card>
+
+  <Card title="Use Different Numbers" icon="phone-plus">
+    Ensure transfer destinations use different numbers than Google Voice
+  </Card>
+
+  <Card title="Test Regularly" icon="vial-circle-check">
+    Test monthly to catch Google Voice interface changes
+  </Card>
+
+  <Card title="Monitor Analytics" icon="chart-mixed">
+    Review performance weekly to identify issues early
+  </Card>
+
+  <Card title="Keep AI Updated" icon="brain">
+    Keep your AI agent's knowledge base current
+  </Card>
+
+  <Card title="Document Setup" icon="file-lines">
+    Keep records of your configuration
+  </Card>
+</CardGroup>
+
+---
+
+## Use Cases and Examples
+
+### Example 1: Freelance Consultant
+
+**Scenario**: Consultant wants separate business line
+
+**Configuration**:
+- Google Voice business number
+- Forward all calls to Recepta AI
+- AI qualifies leads, schedules consultations
+- Personal cell remains private
+
+**Benefit**: Professional presence, no missed opportunities
+
+### Example 2: Small E-commerce Business
+
+**Scenario**: Online store with customer inquiries
+
+**Configuration**:
+- Google Voice customer service line
+- Direct to Recepta AI
+- AI handles order status, returns, FAQs
+- Complex issues transferred to support team
+
+**Benefit**: 24/7 customer service without additional staff
+
+### Example 3: Side Business
+
+**Scenario**: Part-time business alongside full-time job
+
+**Configuration**:
+- Google Voice for business
+- All calls to AI
+- AI books appointments outside work hours
+- Transfers urgent calls to cell (different number)
+
+**Benefit**: Never miss business opportunities, maintain day job
+
+### Example 4: Professional Services
+
+**Scenario**: Attorney, accountant, or similar professional
+
+**Configuration**:
+- Google Voice office line
+- Forward to Recepta AI
+- AI screens calls, collects information
+- Transfers to cell for current clients
+
+**Benefit**: Screen calls professionally, collect leads 24/7
+
+---
+
+## Next Steps
+
+After configuring call forwarding:
+
+<CardGroup cols={2}>
+  <Card title="Configure Your Agent" icon="robot" href="/agents/configuration">
+    Customize your AI agent's responses and behavior
+  </Card>
+
+  <Card title="Set Up Transfers" icon="right-left" href="/features/call-management">
+    Configure call transfer destinations (use different number than Google Voice!)
+  </Card>
+
+  <Card title="Add Knowledge Base" icon="book-open-reader" href="/features/knowledge-base">
+    Train your AI agent with company-specific information
+  </Card>
+
+  <Card title="View Analytics" icon="chart-pie" href="/features/analytics">
+    Monitor performance and optimize call handling
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@recepta.ai">
+    Contact our support team at support@recepta.ai
+  </Card>
+
+  <Card title="Google Voice Help" icon="life-ring" href="https://support.google.com/voice">
+    Visit Google Voice Help Center for platform-specific questions
+  </Card>
+
+  <Card title="Schedule Demo" icon="calendar-check" href="https://recepta.ai/demo">
+    Book a personalized walkthrough with our team
+  </Card>
+
+  <Card title="Documentation" icon="book-bookmark" href="/index">
+    Browse our comprehensive documentation
+  </Card>
+</CardGroup>

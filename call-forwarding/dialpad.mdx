@@ -1,0 +1,344 @@
+---
+title: "How to Forward Calls from Dialpad to Recepta AI"
+description: "Complete guide to forwarding your Dialpad calls to Recepta AI Voice Agent"
+---
+
+## Overview
+
+DialPad customers need to set up call forwarding to Recepta AI to enable your AI voice agent to answer your calls. This guide walks you through the complete setup process, from obtaining your Recepta AI phone number to configuring Dialpad's call routing.
+
+## Getting Your Recepta AI Phone Number
+
+Before configuring Dialpad, you'll need to obtain your dedicated Recepta AI phone number.
+
+<Steps>
+  <Step title="Access Your Dashboard">
+    Navigate to your Recepta AI dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
+  </Step>
+
+  <Step title="Locate Your Phone Number">
+    Your Recepta AI phone number will be displayed prominently in the dashboard. Copy this number as you'll need it for the Dialpad configuration.
+
+    <img src="/images/phonenumber.png" alt="Recepta AI Phone Number Location" />
+  </Step>
+
+  <Step title="Complete Agent Setup">
+    Ensure you have completed setting up your AI voice agent's call instructions and configuration before proceeding with call forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Keep your Recepta AI phone number handy - you'll need to enter it into Dialpad's forwarding settings.
+</Note>
+
+---
+
+## Forwarding Calls to Recepta AI
+
+Dialpad's interface has evolved over time, so we recommend following Dialpad's official documentation for the most up-to-date instructions on managing your main line.
+
+### Main Line Call Routing
+
+<Steps>
+  <Step title="Access Dialpad Instructions">
+    Visit Dialpad's official guide for managing main line call routing:
+
+    [Dialpad: Manage a Main Line - Call Routing](https://help.dialpad.com/v1/docs/en/manage-a-main-line#mainline-call-routing)
+  </Step>
+
+  <Step title="Configure Forwarding">
+    Follow Dialpad's instructions to forward your main line to your Recepta AI phone number (obtained from your dashboard).
+  </Step>
+
+  <Step title="Test the Setup">
+    After configuration, make a test call to verify calls are routing correctly to your Recepta AI voice agent.
+  </Step>
+</Steps>
+
+---
+
+## Business Hours Configuration
+
+You can set different call routing rules for when your office is open versus closed, allowing you to optimize call handling throughout the day.
+
+<CardGroup cols={2}>
+  <Card title="Business Hours Routing" icon="sun">
+    Configure how calls are handled during your regular business hours
+  </Card>
+
+  <Card title="After-Hours Routing" icon="moon">
+    Set up different routing for evenings, weekends, and holidays
+  </Card>
+</CardGroup>
+
+### Setup Business Hours Routing
+
+To configure time-based call routing in Dialpad:
+
+1. Visit Dialpad's business hours routing guide:
+   [Dialpad: Business Hours Call Routing](https://help.dialpad.com/v1/docs/en/manage-a-main-line#business-hours-call-routing)
+
+2. Configure your business hours schedule
+
+3. Set different forwarding destinations for:
+   - **During Business Hours**: Your team, with Recepta AI as overflow
+   - **After Hours**: Direct to Recepta AI
+   - **Holidays**: Custom routing for special occasions
+
+<Tip>
+Consider using Recepta AI as your primary after-hours solution to ensure no calls are missed when your team is unavailable.
+</Tip>
+
+---
+
+## Overflow Call Handling
+
+If you want to use Recepta AI as your "overflow" answering service (when your team is busy), configure it as a fallback option in Dialpad.
+
+### Fallback Configuration
+
+<Steps>
+  <Step title="Access Fallback Settings">
+    Visit Dialpad's fallback options guide:
+
+    [Dialpad: Fallback Options](https://help.dialpad.com/v1/docs/en/manage-a-main-line#fallback-options)
+  </Step>
+
+  <Step title="Configure Overflow Routing">
+    Set Recepta AI as your fallback destination when:
+    - All team members are busy
+    - Calls aren't answered within a certain time
+    - Your queue reaches maximum capacity
+  </Step>
+
+  <Step title="Set Ring Duration">
+    Configure how long calls should ring your team before forwarding to Recepta AI (recommended: 10-15 seconds maximum)
+  </Step>
+</Steps>
+
+<Warning>
+Keep ring times under 15 seconds to prevent caller drop-off. Many callers will hang up if they wait too long.
+</Warning>
+
+---
+
+## Call Routing Strategies
+
+Choose the strategy that best fits your business needs:
+
+<Accordion title="Direct Forwarding (24/7 AI Coverage)">
+  **Best for**: Businesses wanting complete AI automation
+
+  **Setup**: Forward all calls directly to Recepta AI phone number
+
+  **Benefits**:
+  - No missed calls
+  - Consistent service 24/7
+  - Reduced operational costs
+  - Instant call pickup
+</Accordion>
+
+<Accordion title="Sequential Routing (Team First, AI Backup)">
+  **Best for**: Businesses preferring human touch with AI backup
+
+  **Setup**: Ring team for 5-10 seconds, then forward to Recepta AI
+
+  **Benefits**:
+  - Prioritize human interaction
+  - AI handles overflow and after-hours
+  - No calls go to voicemail
+  - Flexible coverage
+
+  <Warning>
+  Choose "Sequentially" (not "Simultaneously") for the "Phones Will Ring" option to ensure proper fallback behavior.
+  </Warning>
+</Accordion>
+
+<Accordion title="Business Hours Based (Time-Sensitive Routing)">
+  **Best for**: Businesses with defined operating hours
+
+  **Setup**: Different routing for business hours vs after-hours
+
+  **Benefits**:
+  - Optimize for different times
+  - Cost-effective coverage
+  - Flexible scheduling
+  - Custom holiday routing
+</Accordion>
+
+---
+
+## Advanced Configuration
+
+### Important Setup Tips
+
+<CardGroup cols={2}>
+  <Card title="Ring Time Limits" icon="clock">
+    **Maximum 10 seconds** ring time before forwarding to Recepta AI
+
+    Longer wait times increase caller drop-off rates significantly.
+  </Card>
+
+  <Card title="Sequential vs Simultaneous" icon="arrows-split-up-and-left">
+    **Choose "Sequential" mode** when using team + AI fallback
+
+    Ensures AI only picks up when team doesn't answer.
+  </Card>
+
+  <Card title="Avoid Infinite Loops" icon="arrows-rotate">
+    **Use different numbers** for transfers
+
+    If your agent transfers calls, ensure the transfer destination is your direct line (e.g., cell phone), not your main Dialpad number.
+  </Card>
+
+  <Card title="Test Thoroughly" icon="vial">
+    **Make test calls** after configuration
+
+    Verify calls route correctly in all scenarios before going live.
+  </Card>
+</CardGroup>
+
+### Preventing Call Loops
+
+<Warning>
+If your Recepta AI agent has transfer destinations configured, ensure the transfer number is **different** from your main Dialpad number. Otherwise, you'll create an infinite loop where calls keep getting bounced back and forth.
+</Warning>
+
+**Example Safe Configuration**:
+- Main Dialpad Number: Forwards to Recepta AI
+- Agent Transfer Destination: Your direct cell phone or desk phone
+
+---
+
+## Testing Your Setup
+
+After configuration, thoroughly test your call forwarding:
+
+<Steps>
+  <Step title="Test During Business Hours">
+    Call your Dialpad number during business hours to verify routing works as expected
+  </Step>
+
+  <Step title="Test After Hours">
+    Call outside business hours to ensure after-hours routing is configured correctly
+  </Step>
+
+  <Step title="Test Overflow">
+    Have multiple people call simultaneously to test overflow/fallback behavior
+  </Step>
+
+  <Step title="Test Call Transfers">
+    If configured, test that agent transfers work without creating loops
+  </Step>
+
+  <Step title="Review Call Logs">
+    Check both Dialpad and Recepta AI dashboards to verify calls are logging correctly
+  </Step>
+</Steps>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Calls Not Reaching Recepta AI">
+    **Possible Solutions**:
+    - Verify you entered the correct Recepta AI phone number in Dialpad
+    - Check that your Dialpad forwarding is enabled and active
+    - Ensure your Recepta AI agent is configured and active
+    - Review Dialpad's call flow settings
+    - Make a test call and check both systems' logs
+  </Accordion>
+
+  <Accordion title="Calls Going to Voicemail">
+    **Possible Solutions**:
+    - Disable voicemail in Dialpad for this number
+    - Ensure Recepta AI is set as the primary destination
+    - Check ring duration settings (should forward before voicemail triggers)
+    - Verify fallback settings are configured correctly
+  </Accordion>
+
+  <Accordion title="Call Loops (Calls Bouncing Back and Forth)">
+    **Possible Solutions**:
+    - Ensure transfer destinations use different phone numbers
+    - Don't forward Dialpad number to itself
+    - Use direct lines (cell/desk phones) for agent transfers
+    - Review your call flow logic in both systems
+  </Accordion>
+
+  <Accordion title="Business Hours Not Working">
+    **Possible Solutions**:
+    - Verify business hours are set correctly in Dialpad
+    - Check timezone settings
+    - Ensure both business hours and after-hours rules are configured
+    - Test during transition times (opening/closing)
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Monitoring and Optimization
+
+### Call Analytics
+
+<CardGroup cols={2}>
+  <Card title="Dialpad Analytics" icon="chart-line">
+    Monitor call volume, duration, and routing patterns in Dialpad's dashboard
+  </Card>
+
+  <Card title="Recepta AI Analytics" icon="chart-bar" href="/features/analytics">
+    Track AI agent performance, conversation quality, and customer satisfaction
+  </Card>
+
+  <Card title="Call Logs" icon="list" href="/features/call-logs">
+    Review detailed logs of all calls handled by your AI agent
+  </Card>
+
+  <Card title="Performance Metrics" icon="gauge">
+    Compare metrics across different routing strategies to optimize performance
+  </Card>
+</CardGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Configure Your Agent" icon="robot" href="/agents/configuration">
+    Customize your AI agent's responses and behavior
+  </Card>
+
+  <Card title="Set Up Transfers" icon="phone-arrow-right" href="/features/call-management">
+    Configure call transfer destinations for complex scenarios
+  </Card>
+
+  <Card title="Knowledge Base" icon="book" href="/features/knowledge-base">
+    Add custom knowledge to help your agent answer specific questions
+  </Card>
+
+  <Card title="View Analytics" icon="chart-mixed" href="/features/analytics">
+    Monitor performance and optimize your call handling
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@recepta.ai">
+    Contact our support team at support@recepta.ai
+  </Card>
+
+  <Card title="Dialpad Support" icon="life-ring" href="https://help.dialpad.com">
+    Visit Dialpad's help center for platform-specific questions
+  </Card>
+
+  <Card title="Schedule Demo" icon="calendar" href="https://recepta.ai/demo">
+    Book a personalized walkthrough with our team
+  </Card>
+
+  <Card title="Documentation" icon="book-open" href="/index">
+    Browse our comprehensive documentation
+  </Card>
+</CardGroup>

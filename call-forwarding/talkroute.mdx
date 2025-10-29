@@ -1,0 +1,461 @@
+---
+title: "How to Forward Calls from Talkroute to Recepta AI"
+description: "Complete guide to forwarding your Talkroute calls to Recepta AI Voice Agent"
+---
+
+## Overview
+
+Talkroute customers can configure call forwarding to enable your Recepta AI voice agent to answer incoming calls. This guide covers everything from basic forwarding setup to advanced configurations like overflow answering and scheduled routing.
+
+## Getting Your Recepta AI Phone Number
+
+Before configuring Talkroute, you'll need to obtain your dedicated Recepta AI phone number.
+
+<Steps>
+  <Step title="Access Your Dashboard">
+    Navigate to your Recepta AI dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
+  </Step>
+
+  <Step title="Locate Your Phone Number">
+    Your Recepta AI phone number will be displayed prominently in the dashboard. Copy this number as you'll need it for the Talkroute configuration.
+
+    <img src="/images/phonenumber.png" alt="Recepta AI Phone Number Location" />
+  </Step>
+
+  <Step title="Complete Agent Setup">
+    Ensure you have completed setting up your AI voice agent's call instructions and configuration before proceeding with call forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Keep your Recepta AI phone number handy - you'll need to enter it into Talkroute's forwarding settings.
+</Note>
+
+---
+
+## Basic Call Forwarding Setup
+
+Configure Talkroute to forward calls to your Recepta AI voice agent.
+
+### Configuration Steps
+
+<Steps>
+  <Step title="Log into Talkroute">
+    Access your Talkroute account and navigate to settings
+  </Step>
+
+  <Step title="Add Forwarding Number">
+    Add your Recepta AI phone number as a forwarding destination. Follow Talkroute's guidance on adding a forwarding phone number to your:
+    - Virtual phone number
+    - Menu option
+    - Extension
+  </Step>
+
+  <Step title="Disable Call Announcement & Voicemail">
+    **Critical Requirement**: You must **uncheck** the "Enable Call Announcement & Talkroute Voicemail" option.
+
+    <Warning>
+    If voicemail is enabled, calls may go to voicemail instead of reaching your AI agent.
+    </Warning>
+  </Step>
+
+  <Step title="Configure Caller ID Forwarding">
+    Set up incoming caller ID settings to forward the caller's identification to Recepta AI. This allows your AI agent to see who's calling.
+
+    Follow Talkroute's instructions on changing the incoming caller ID settings.
+  </Step>
+
+  <Step title="Save and Test">
+    Save your configuration and make a test call to verify calls are routing correctly to your Recepta AI voice agent.
+  </Step>
+</Steps>
+
+---
+
+## Advanced Configuration Options
+
+### Overflow Answering (Sequential Routing)
+
+Set up sequential ringing so your team has the option to answer first, with calls automatically routing to Recepta AI if unanswered.
+
+<Steps>
+  <Step title="Configure Sequential Ring">
+    In Talkroute, set up sequential ringing with your team members first
+  </Step>
+
+  <Step title="Set Ring Duration">
+    Configure how long calls should ring your team before forwarding to Recepta AI
+
+    <Warning>
+    Keep ring time under 10 seconds maximum to prevent caller drop-off
+    </Warning>
+  </Step>
+
+  <Step title="Add Recepta AI as Fallback">
+    Add Recepta AI as the final destination in your sequential routing
+  </Step>
+</Steps>
+
+**Use Cases for Overflow Routing**:
+- Peak call volume periods
+- When team is busy with other calls
+- Backup coverage during breaks
+- Ensuring no calls go unanswered
+
+### Scheduled Call Forwarding
+
+Configure custom weekly schedules for when Recepta AI handles calls (available on select Talkroute plans).
+
+<CardGroup cols={2}>
+  <Card title="Business Hours" icon="sun">
+    **During Business Hours**: Route to your team with AI overflow
+
+    Your staff handles calls during peak hours, with Recepta AI catching overflow
+  </Card>
+
+  <Card title="After Hours" icon="moon">
+    **Outside Business Hours**: Route directly to Recepta AI
+
+    Ensure 24/7 coverage when your team is unavailable
+  </Card>
+
+  <Card title="Weekends" icon="calendar-week">
+    **Weekend Coverage**: Full AI handling
+
+    Let Recepta AI manage all weekend calls automatically
+  </Card>
+
+  <Card title="Holidays" icon="calendar-xmark">
+    **Holiday Routing**: Special schedules
+
+    Configure unique routing for holidays and special occasions
+  </Card>
+</CardGroup>
+
+### Setup Business Hours Routing
+
+<Steps>
+  <Step title="Access Schedule Settings">
+    Navigate to Talkroute's schedule or business hours settings
+  </Step>
+
+  <Step title="Define Business Hours">
+    Set your business hours schedule (e.g., Monday-Friday, 9 AM - 5 PM)
+  </Step>
+
+  <Step title="Configure During-Hours Routing">
+    Set up routing for business hours:
+    - Option 1: Team first, then Recepta AI overflow
+    - Option 2: Direct to Recepta AI for consistent service
+  </Step>
+
+  <Step title="Configure After-Hours Routing">
+    Set after-hours calls to route directly to Recepta AI
+  </Step>
+
+  <Step title="Test Different Scenarios">
+    Test calls during and outside business hours to verify correct routing
+  </Step>
+</Steps>
+
+<Note>
+Scheduled forwarding availability depends on your Talkroute plan. Check with Talkroute support if you're unsure whether this feature is available.
+</Note>
+
+---
+
+## Call Routing Strategies
+
+Choose the strategy that best fits your business needs:
+
+<Accordion title="Direct Forwarding (24/7 AI Coverage)">
+  **Best for**: Businesses wanting complete AI automation
+
+  **Setup**: Forward all calls directly to Recepta AI phone number
+
+  **Benefits**:
+  - No missed calls
+  - Consistent service 24/7
+  - Reduced operational costs
+  - Instant call pickup
+  - Predictable customer experience
+</Accordion>
+
+<Accordion title="Overflow Answering (Team First, AI Backup)">
+  **Best for**: Businesses preferring human touch with AI backup
+
+  **Setup**: Ring team for 5-10 seconds, then forward to Recepta AI
+
+  **Benefits**:
+  - Prioritize human interaction
+  - AI handles overflow and missed calls
+  - No calls go to voicemail
+  - Flexible coverage
+  - Best of both worlds
+
+  <Warning>
+  Keep ring times under 10 seconds maximum. Many callers will hang up if they wait too long.
+  </Warning>
+</Accordion>
+
+<Accordion title="Scheduled Routing (Time-Based)">
+  **Best for**: Businesses with defined operating hours
+
+  **Setup**: Different routing for business hours vs after-hours
+
+  **Benefits**:
+  - Optimize for different times
+  - Cost-effective coverage
+  - Team handles calls when available
+  - AI ensures 24/7 availability
+  - Custom holiday routing
+</Accordion>
+
+---
+
+## Important Configuration Tips
+
+### Critical Settings Checklist
+
+<CardGroup cols={2}>
+  <Card title="Disable Voicemail" icon="voicemail">
+    **Must Do**: Uncheck "Enable Call Announcement & Talkroute Voicemail"
+
+    Otherwise calls will go to voicemail instead of Recepta AI
+  </Card>
+
+  <Card title="Caller ID Forwarding" icon="id-card">
+    **Enable**: Configure incoming caller ID forwarding
+
+    Allows your AI agent to see and announce who's calling
+  </Card>
+
+  <Card title="Ring Time Limits" icon="clock">
+    **Maximum 10 seconds**: Ring time before forwarding
+
+    Longer wait times increase caller abandonment rates
+  </Card>
+
+  <Card title="Test Thoroughly" icon="vial">
+    **Make test calls**: After configuration
+
+    Verify calls route correctly in all scenarios
+  </Card>
+</CardGroup>
+
+### Preventing Infinite Call Loops
+
+<Warning>
+**Avoid Infinite Loops**: If your Recepta AI agent has you as a transfer destination, the transfer number **must be different** from your main Talkroute number.
+</Warning>
+
+**Safe Configuration Example**:
+- Main Talkroute Number: Forwards to Recepta AI → ✅ Correct
+- AI Agent Transfer Destination: Your direct cell phone → ✅ Correct
+- ❌ **WRONG**: AI transfers back to main Talkroute number (creates loop)
+
+---
+
+## Testing Your Configuration
+
+Thorough testing ensures your setup works correctly in all scenarios:
+
+<Steps>
+  <Step title="Test Basic Forwarding">
+    Call your Talkroute number to verify it forwards to Recepta AI
+  </Step>
+
+  <Step title="Test Caller ID">
+    Verify that caller ID information is being passed to Recepta AI
+  </Step>
+
+  <Step title="Test Business Hours">
+    If configured, test during and outside business hours
+  </Step>
+
+  <Step title="Test Overflow Routing">
+    If using overflow, verify proper fallback behavior when team doesn't answer
+  </Step>
+
+  <Step title="Test Call Transfers">
+    Verify AI agent transfers work without creating loops
+  </Step>
+
+  <Step title="Review Call Logs">
+    Check logs in both Talkroute and Recepta AI dashboards
+  </Step>
+</Steps>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Calls Going to Voicemail Instead of AI">
+    **Solution**:
+    - Ensure "Enable Call Announcement & Talkroute Voicemail" is **unchecked**
+    - Verify voicemail is disabled for your forwarding destination
+    - Check that Recepta AI is set as the primary forwarding number
+    - Reduce ring time before forwarding
+
+    **This is the most common issue** with Talkroute setup.
+  </Accordion>
+
+  <Accordion title="Calls Not Reaching Recepta AI">
+    **Diagnostic Steps**:
+    - Verify correct Recepta AI phone number is entered in Talkroute
+    - Check that call forwarding is enabled and active
+    - Ensure your Recepta AI agent is configured and active
+    - Review Talkroute's call routing settings
+    - Make test call and review logs in both systems
+
+    **Common Causes**:
+    - Typo in Recepta AI phone number
+    - Forwarding not properly saved
+    - Conflicting routing rules
+    - AI agent not active
+  </Accordion>
+
+  <Accordion title="Caller ID Not Showing">
+    **Solutions**:
+    - Verify incoming caller ID forwarding is enabled in Talkroute
+    - Check Talkroute's caller ID settings
+    - Ensure caller ID forwarding is configured per Talkroute's instructions
+    - Contact Talkroute support if issue persists
+
+    **Note**: Some carriers may restrict caller ID forwarding
+  </Accordion>
+
+  <Accordion title="Infinite Call Loops">
+    **Solutions**:
+    - Use different phone numbers for transfers
+    - Never forward Talkroute number to itself
+    - Configure AI transfers to direct lines (cell/desk phones)
+    - Review complete call flow logic
+    - Document your routing to avoid loops
+
+    **Example Safe Setup**:
+    ```
+    Caller → Talkroute Main → Recepta AI → Transfer to Cell Phone
+    (Each step uses a different number)
+    ```
+  </Accordion>
+
+  <Accordion title="Scheduled Routing Not Working">
+    **Solutions**:
+    - Verify your Talkroute plan supports scheduled forwarding
+    - Check business hours schedule is set correctly
+    - Ensure timezone settings are correct
+    - Test during transition times (opening/closing)
+    - Contact Talkroute support for plan-specific features
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Monitoring and Analytics
+
+### Tracking Performance
+
+<CardGroup cols={2}>
+  <Card title="Talkroute Analytics" icon="chart-line">
+    Monitor call volume, routing patterns, and forwarding statistics
+  </Card>
+
+  <Card title="Recepta AI Dashboard" icon="gauge-high" href="/features/analytics">
+    Track AI performance, conversation quality, and outcomes
+  </Card>
+
+  <Card title="Call Logs" icon="rectangle-list" href="/features/call-logs">
+    Review detailed logs from both systems to identify issues
+  </Card>
+
+  <Card title="Quality Metrics" icon="star">
+    Measure customer satisfaction and agent performance
+  </Card>
+</CardGroup>
+
+### Key Metrics to Monitor
+
+- **Call Answer Rate**: Percentage of calls successfully handled
+- **Voicemail Rate**: Ensure calls aren't going to voicemail
+- **Transfer Rate**: How often AI transfers to humans
+- **Call Duration**: Length of AI conversations
+- **Customer Satisfaction**: Ratings and feedback
+- **Overflow Performance**: How well overflow routing works
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Disable Voicemail" icon="phone-slash">
+    Always disable voicemail for numbers forwarding to Recepta AI
+  </Card>
+
+  <Card title="Enable Caller ID" icon="address-card">
+    Configure caller ID forwarding for better service
+  </Card>
+
+  <Card title="Minimize Wait Time" icon="clock-rotate-left">
+    Keep ring times under 10 seconds to reduce drop-off
+  </Card>
+
+  <Card title="Test Regularly" icon="vial-circle-check">
+    Test your setup monthly to catch configuration changes
+  </Card>
+
+  <Card title="Monitor Analytics" icon="chart-mixed">
+    Review performance weekly to identify issues early
+  </Card>
+
+  <Card title="Update AI Knowledge" icon="brain">
+    Keep your AI agent's knowledge base current
+  </Card>
+</CardGroup>
+
+---
+
+## Next Steps
+
+After configuring call forwarding:
+
+<CardGroup cols={2}>
+  <Card title="Configure Your Agent" icon="robot" href="/agents/configuration">
+    Customize your AI agent's responses and behavior
+  </Card>
+
+  <Card title="Set Up Transfers" icon="right-left" href="/features/call-management">
+    Configure call transfer destinations and rules
+  </Card>
+
+  <Card title="Add Knowledge Base" icon="book-open-reader" href="/features/knowledge-base">
+    Train your AI agent with company-specific information
+  </Card>
+
+  <Card title="View Analytics" icon="chart-pie" href="/features/analytics">
+    Monitor performance and optimize call handling
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@recepta.ai">
+    Contact our support team at support@recepta.ai
+  </Card>
+
+  <Card title="Talkroute Support" icon="life-ring" href="https://support.talkroute.com">
+    Visit Talkroute's support for platform-specific questions
+  </Card>
+
+  <Card title="Schedule Demo" icon="calendar-check" href="https://recepta.ai/demo">
+    Book a personalized walkthrough with our team
+  </Card>
+
+  <Card title="Documentation" icon="book-bookmark" href="/index">
+    Browse our comprehensive documentation
+  </Card>
+</CardGroup>

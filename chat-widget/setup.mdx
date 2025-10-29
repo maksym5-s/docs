@@ -1,0 +1,410 @@
+---
+title: "Chat Widget Setup"
+description: "Create and configure your embeddable chat widget"
+icon: "settings"
+---
+
+## Creating Your Chat Widget
+
+Setting up a chat widget in Recepta AI is quick and straightforward. This guide will walk you through the entire process from creation to deployment.
+
+<Steps>
+  <Step title="Access Chat Widget Page">
+    Navigate to the **Chat Widget** section in your Recepta AI dashboard
+  </Step>
+  <Step title="Configure Widget Settings">
+    Customize the appearance and behavior of your widget
+  </Step>
+  <Step title="Generate Embed Code">
+    Get the HTML code to add to your website
+  </Step>
+  <Step title="Deploy to Your Website">
+    Add the embed code to your website and test functionality
+  </Step>
+</Steps>
+
+## Widget Configuration
+
+### Basic Settings
+
+<CardGroup cols={2}>
+  <Card title="Widget Title" icon="tag">
+    **Default**: "Chat with us"
+    - Appears in the chat header
+    - Keep it friendly and inviting
+    - Examples: "Need Help?", "Ask us anything", "Live Support"
+  </Card>
+  <Card title="Primary Color" icon="palette">
+    **Default**: #667EEA
+    - Main color for buttons and accents
+    - Should match your brand colors
+    - Use hex color codes (e.g., #FF5733)
+  </Card>
+</CardGroup>
+
+### Position Settings
+
+Choose where the chat widget appears on your website:
+
+<Tabs>
+  <Tab title="Bottom Right">
+    ```javascript
+    {
+      "position": "bottom-right",
+      "margin": {
+        "bottom": "20px",
+        "right": "20px"
+      }
+    }
+    ```
+    **Best for**: Most websites, standard expectation
+  </Tab>
+  <Tab title="Bottom Left">
+    ```javascript
+    {
+      "position": "bottom-left", 
+      "margin": {
+        "bottom": "20px",
+        "left": "20px"
+      }
+    }
+    ```
+    **Best for**: When right side has other elements
+  </Tab>
+</Tabs>
+
+## Step-by-Step Setup Guide
+
+### Step 1: Configure Widget Appearance
+
+<Frame>
+  <img src="/images/chat-widget-configuration.png" alt="Chat Widget Configuration Interface" />
+</Frame>
+
+1. **Widget Title**: Enter a welcoming title for your chat widget
+   ```text
+   Examples:
+   - "Chat with us"
+   - "Need help?"
+   - "Ask our AI assistant"
+   - "Get instant support"
+   ```
+
+2. **Primary Color**: Choose your brand color
+   - Use the color picker for visual selection
+   - Or enter a hex code directly
+   - Preview updates in real-time
+
+3. **Position**: Select widget placement
+   - Bottom-right (recommended for most sites)
+   - Bottom-left (alternative placement)
+
+### Step 2: Preview Your Widget
+
+The preview section shows exactly how your widget will appear:
+
+<CardGroup cols={2}>
+  <Card title="Minimized View" icon="minimize">
+    - Floating button in selected corner
+    - Shows your chosen color scheme
+    - Displays hover effects
+  </Card>
+  <Card title="Widget Details" icon="info">
+    - Title display
+    - Color scheme preview
+    - Position confirmation
+  </Card>
+</CardGroup>
+
+### Step 3: Generate and Copy Embed Code
+
+Once you're satisfied with your configuration:
+
+1. **Create/Update Widget**: Click the action button
+2. **Copy Embed Code**: Use the "Copy Code" button
+3. **Copy Script URL**: Alternative installation method
+
+<Note>
+  The embed code is unique to your account and widget configuration. Keep it secure and only use it on your authorized domains.
+</Note>
+
+## Embed Code Implementation
+
+### Standard Implementation
+
+Add this code just before the closing `</body>` tag on your website:
+
+```html
+<!-- Recepta AI Chat Widget -->
+<script>
+(function() {
+  var script = document.createElement('script');
+  script.src = 'YOUR_SCRIPT_URL_HERE';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+})();
+</script>
+```
+
+### Advanced Implementation Options
+
+<Tabs>
+  <Tab title="WordPress">
+    **Method 1: Theme Functions**
+    ```php
+    function add_recepta_chat_widget() {
+        ?>
+        <script>
+        // Your embed code here
+        </script>
+        <?php
+    }
+    add_action('wp_footer', 'add_recepta_chat_widget');
+    ```
+
+    **Method 2: Plugin**
+    - Install a custom code plugin
+    - Add embed code to footer scripts
+    - Configure on specific pages if needed
+  </Tab>
+  
+  <Tab title="Shopify">
+    **Theme Integration**:
+    1. Go to Online Store → Themes
+    2. Click "Actions" → "Edit code"
+    3. Open `theme.liquid` file
+    4. Add embed code before `</body>`
+    5. Save changes
+
+    ```liquid
+    <!-- Before </body> tag -->
+    {{ 'recepta-chat-widget.js' | asset_url | script_tag }}
+    ```
+  </Tab>
+  
+  <Tab title="React/Next.js">
+    **Component Integration**:
+    ```jsx
+    import { useEffect } from 'react';
+
+    const ChatWidget = () => {
+      useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'YOUR_SCRIPT_URL_HERE';
+        script.async = true;
+        document.head.appendChild(script);
+
+        return () => {
+          document.head.removeChild(script);
+        };
+      }, []);
+
+      return null;
+    };
+
+    export default ChatWidget;
+    ```
+  </Tab>
+  
+  <Tab title="Google Tag Manager">
+    **GTM Implementation**:
+    1. Create new tag in GTM
+    2. Choose "Custom HTML" tag type
+    3. Paste your embed code
+    4. Set trigger to "All Pages"
+    5. Publish container
+
+    ```html
+    <script>
+    // Your Recepta AI embed code
+    </script>
+    ```
+  </Tab>
+</Tabs>
+
+## Testing Your Widget
+
+After implementation, thoroughly test your widget:
+
+### Functionality Checklist
+
+<AccordionGroup>
+  <Accordion title="Visual Appearance">
+    - [ ] Widget appears in correct position
+    - [ ] Colors match your brand
+    - [ ] Title displays correctly
+    - [ ] Responsive on mobile devices
+    - [ ] No layout conflicts with existing elements
+  </Accordion>
+  
+  <Accordion title="Conversation Testing">
+    - [ ] Chat opens when clicked
+    - [ ] AI responds to messages
+    - [ ] Conversation flows naturally
+    - [ ] Typing indicators work
+    - [ ] Messages display properly
+  </Accordion>
+  
+  <Accordion title="Performance Testing">
+    - [ ] Page load time not affected
+    - [ ] Widget loads asynchronously
+    - [ ] No JavaScript errors
+    - [ ] Works on different browsers
+    - [ ] Mobile performance is good
+  </Accordion>
+</AccordionGroup>
+
+### Test Conversation Examples
+
+Try these conversation starters to test your widget:
+
+```text
+Basic Questions:
+- "What are your business hours?"
+- "How can I contact you?"
+- "What services do you offer?"
+
+Product/Service Inquiries:
+- "Can you tell me about your pricing?"
+- "Do you offer consultations?"
+- "How do I get started?"
+
+Support Scenarios:
+- "I need help with my order"
+- "I have a technical question"
+- "Can I speak to someone?"
+```
+
+## Configuration Updates
+
+### Updating Existing Widgets
+
+To modify your widget configuration:
+
+1. **Access Widget Settings**: Return to the Chat Widget page
+2. **Make Changes**: Update title, color, or position
+3. **Update Widget**: Click the update button
+4. **Automatic Deployment**: Changes apply automatically (no code changes needed)
+
+<Tip>
+  Widget updates are applied in real-time without requiring code changes on your website.
+</Tip>
+
+### Managing Multiple Widgets
+
+<Warning>
+  Currently, each account supports one active chat widget. If you need multiple widgets for different domains or purposes, contact support for enterprise options.
+</Warning>
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+<AccordionGroup>
+  <Accordion title="Widget Not Appearing">
+    **Possible Causes**:
+    - Embed code not added correctly
+    - JavaScript blocked by browser/ad blocker
+    - CSS conflicts hiding the widget
+    - Script loading errors
+
+    **Solutions**:
+    - Verify embed code placement before `</body>`
+    - Check browser console for errors
+    - Test in incognito/private mode
+    - Ensure script URL is accessible
+  </Accordion>
+  
+  <Accordion title="Widget Appears But Doesn't Respond">
+    **Possible Causes**:
+    - Network connectivity issues
+    - API key problems
+    - Agent not configured properly
+    - Service downtime
+
+    **Solutions**:
+    - Check internet connection
+    - Verify widget ID is correct
+    - Ensure AI agent is active
+    - Contact support if persistent
+  </Accordion>
+  
+  <Accordion title="Styling Conflicts">
+    **Possible Causes**:
+    - CSS conflicts with existing styles
+    - Z-index issues
+    - Mobile responsiveness problems
+
+    **Solutions**:
+    - Use browser developer tools to inspect
+    - Adjust CSS priorities if needed
+    - Test on different screen sizes
+    - Consider position alternatives
+  </Accordion>
+</AccordionGroup>
+
+## Performance Optimization
+
+### Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Loading Performance" icon="zap">
+    - Load widget asynchronously
+    - Use defer attribute
+    - Minimize initial payload
+    - Lazy load when needed
+  </Card>
+  <Card title="User Experience" icon="heart">
+    - Position thoughtfully
+    - Use brand-consistent colors
+    - Test on mobile devices
+    - Monitor response times
+  </Card>
+</CardGroup>
+
+### Monitoring and Analytics
+
+Track widget performance through your dashboard:
+
+- **Conversation Volume**: Daily/weekly chat counts
+- **Response Times**: Average AI response speed
+- **User Satisfaction**: Post-chat feedback scores
+- **Conversion Tracking**: Leads generated through chat
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Customize Appearance"
+    icon="palette"
+    href="/chat-widget/customization"
+  >
+    Learn advanced customization options for your widget
+  </Card>
+  <Card
+    title="Integration Guide"
+    icon="code"
+    href="/chat-widget/integration"
+  >
+    Explore platform-specific integration tutorials
+  </Card>
+  <Card
+    title="Analytics & Insights"
+    icon="chart-line"
+    href="/features/analytics"
+  >
+    Track and analyze your chat widget performance
+  </Card>
+  <Card
+    title="Advanced Features"
+    icon="settings"
+    href="/advanced/webhooks"
+  >
+    Set up webhooks and advanced integrations
+  </Card>
+</CardGroup>
+
+---
+
+**Your chat widget is now live!** Monitor its performance and iterate based on customer feedback and analytics data.

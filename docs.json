@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Recepta AI Voice Agent SaaS",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#667EEA",
+    "light": "#9CA3F4",
+    "dark": "#4C63D2"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -18,31 +18,58 @@
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "setup/authentication",
+              "setup/onboarding"
             ]
           },
           {
-            "group": "Customization",
+            "group": "AI Voice Agents",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "agents/overview",
+              "agents/creation",
+              "agents/configuration",
+              "agents/management"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Chat Widget",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "chat-widget/overview",
+              "chat-widget/setup",
+              "chat-widget/customization",
+              "chat-widget/integration"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Features",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "features/call-management",
+              "features/call-logs",
+              "features/knowledge-base",
+              "features/qa-system",
+              "features/analytics",
+              "features/phone-numbers"
+            ]
+          },
+          {
+            "group": "Call Forwarding Guides",
+            "pages": [
+              "call-forwarding/callrail",
+              "call-forwarding/dialpad",
+              "call-forwarding/ringcentral",
+              "call-forwarding/8x8",
+              "call-forwarding/google-voice",
+              "call-forwarding/phonecom",
+              "call-forwarding/talkroute",
+              "call-forwarding/vonage"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/webhooks",
+              "advanced/custom-prompts",
+              "advanced/integrations"
             ]
           }
         ]
@@ -76,6 +103,11 @@
           "icon": "book-open-cover"
         },
         {
+          "anchor": "Community",
+          "href": "https://mintlify.com/community",
+          "icon": "slack"
+        },
+        {
           "anchor": "Blog",
           "href": "https://mintlify.com/blog",
           "icon": "newspaper"
@@ -91,13 +123,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@recepta.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "https://recepta.ai"
     }
   },
   "contextual": {
@@ -114,9 +146,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/receptaai",
+      "github": "https://github.com/receptaai",
+      "linkedin": "https://linkedin.com/company/recepta-ai"
     }
   }
 }

@@ -1,0 +1,115 @@
+---
+title: "Call Management"
+description: "Call handling, routing, and caller type configuration features"
+---
+
+## Overview
+
+The platform provides comprehensive call management through intelligent agent configuration and caller type handling, with automatic agent updates based on your business information.
+
+## Automatic Agent Management
+
+### Agent Creation & Updates
+- **Dual Agent Creation**: Both voice and chat agents are automatically created during signup
+- **Dynamic Updates**: Agents update automatically when you modify onboarding information
+- **Synchronization**: Changes to agent configuration automatically propagate to all agents via the `applyUpdatesForAgents` function
+
+## Caller Type Configuration
+
+Based on the onboarding implementation, the platform handles four distinct caller types:
+
+<CardGroup cols={2}>
+  <Card title="Potential New Clients" icon="user-plus">
+    - Information collection (name, contact details)
+    - Location qualification
+    - Service qualification  
+    - Custom qualification questions
+    - Additional information collection
+    - Message taking configuration
+  </Card>
+  <Card title="Existing Customers" icon="user-check">
+    - Basic information collection
+    - Additional information collection
+    - Simplified qualification process
+    - Message handling setup
+  </Card>
+  <Card title="Sales Inquiries" icon="briefcase">
+    - Basic information collection only
+    - Streamlined process
+    - Direct message taking
+  </Card>
+  <Card title="Other Callers" icon="users">
+    - Basic information collection
+    - Additional information collection
+    - General inquiry handling
+  </Card>
+</CardGroup>
+
+## Configuration Options
+
+### Information Collection Settings
+Each caller type can be configured with:
+- **Collect Info**: Toggle for basic information gathering
+- **Location Qualification**: Geographic or service area questions
+- **Service Qualification**: Service-specific questions
+- **Custom Qualification**: Business-specific questions
+- **Additional Info Collection**: Extra data gathering
+
+### Action Configuration
+Define post-call actions:
+- **Next Action**: What happens after information collection
+- **Transfer Settings**: Call transfer configuration with contact details
+- **Human Handoff**: Live transfer to human agents when AI assistance is insufficient
+- **Appointment Settings**: Calendar and scheduling integration
+- **Message Settings**: Final statements and follow-up messaging
+
+## Business Information Integration
+
+### Company Data
+The agent configuration automatically incorporates:
+- **About Us**: Company description and overview
+- **FAQ**: Frequently asked questions with answers
+- **Directions**: Location and navigation instructions
+- **Voice Selection**: Chosen voice for agent interactions
+
+### Real-time Updates
+- **Synchronous Updates**: Changes immediately apply to all agents
+- **Configuration Persistence**: Settings saved to agent configuration
+- **Version Control**: Maintains configuration history
+
+## Voice Configuration
+
+### Voice Selection Options
+The platform supports voice configuration with:
+- **Voice Selection Modal**: Interface for choosing agent voice
+- **Voice Assignment**: Binding specific voices to agents
+- **Multi-Voice Support**: Different voices for different scenarios
+
+## Call Routing Features
+
+### Phone Number Integration
+- **Number Assignment**: Assign agents to specific phone numbers
+- **Inbound/Outbound**: Configure agents for different call directions
+- **Multiple Lines**: Support for multiple phone number assignments
+
+### Human Handoff Routing
+- **Escalation Triggers**: Automatic detection of situations requiring human intervention
+- **Transfer Protocols**: Seamless transition from AI to human agents
+- **Context Preservation**: Full conversation history passed to human agents
+- **Fallback Options**: Multiple human agent availability configurations
+
+## Spam Protection
+
+### Built-in Protection
+- **Automatic Filtering**: Spam calls are automatically blocked
+- **No Billing**: Blocked spam calls don't incur charges
+- **Transparent Handling**: Users are notified about spam protection
+
+## Analytics Integration
+
+### Performance Tracking
+Call management integrates with analytics for:
+- **Call Volume**: Track calls by type and agent
+- **Success Rates**: Monitor call completion rates
+- **Configuration Performance**: Analyze effectiveness of different settings
+- **Cost Tracking**: Monitor expenses by configuration type

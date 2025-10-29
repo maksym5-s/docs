@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\pages/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "Read(D:\\projects\\receptabuildout\\frontend\\src\\api/**)",
+      "WebFetch(domain:smithaivoiceassistant.freshdesk.com)",
+      "Bash(curl -s \"https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000200063-how-to-forward-calls-from-callrail-to-ai-receptionist\")",
+      "Bash(curl -s \"https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000200065-how-to-forward-calls-from-dialpad-to-ai-receptionist\")",
+      "Bash(curl -s \"https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000200067-how-to-forward-calls-from-ringcentral-to-ai-receptionist\")",
+      "Bash(curl -L -s \"https://smithaivoiceassistant.freshdesk.com/support/solutions/articles/151000200063-how-to-forward-calls-from-callrail-to-ai-receptionist\")",
+      "Bash(test -d images)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

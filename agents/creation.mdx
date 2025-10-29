@@ -1,0 +1,445 @@
+---
+title: "Creating AI Voice Agents"
+description: "Step-by-step guide to creating your AI voice agents"
+icon: "plus-circle"
+---
+
+## Creating Your First Agent
+
+Creating an AI voice agent in Recepta AI is a straightforward process. This guide walks you through each step, from initial setup to going live.
+
+<Note>
+  Before creating agents, make sure you've completed the [onboarding process](/setup/onboarding) and have your business information configured.
+</Note>
+
+## Step 1: Access the Agent Creation Interface
+
+1. **Navigate to Agents**: In your dashboard, click on the "AI Agents" section
+2. **Create New Agent**: Click the "Create New Agent" button
+3. **Agent Modal**: The agent creation modal will open with configuration options
+
+<Frame>
+  <img
+    src="/images/agent-creation-modal.png"
+    alt="Agent Creation Modal"
+  />
+</Frame>
+
+## Step 2: Basic Agent Configuration
+
+### Agent Name and Description
+
+```javascript
+// Example agent configuration
+{
+  "name": "Customer Support Agent",
+  "description": "Handles general customer inquiries and support requests",
+  "language": "English",
+  "voice_id": "professional_female_1"
+}
+```
+
+<CardGroup cols={2}>
+  <Card title="Agent Name" icon="tag">
+    **Best Practices**:
+    - Use descriptive names (e.g., "Sales Agent", "Support Bot")
+    - Keep it under 50 characters
+    - Avoid special characters
+    - Make it easily identifiable
+  </Card>
+  <Card title="Description" icon="file-text">
+    **Best Practices**:
+    - Clearly explain the agent's purpose
+    - Include primary functions
+    - Mention target audience
+    - Keep it concise but informative
+  </Card>
+</CardGroup>
+
+### Voice Selection
+
+Choose from our library of professional AI voices:
+
+<AccordionGroup>
+  <Accordion title="Professional Voices">
+    **Best for**: Business, corporate, professional services
+    - Clear articulation
+    - Neutral accent
+    - Authoritative tone
+    - Available in male/female variants
+  </Accordion>
+  
+  <Accordion title="Friendly Voices">
+    **Best for**: Customer service, hospitality, retail
+    - Warm and approachable
+    - Conversational tone
+    - Slight regional accents available
+    - High customer satisfaction scores
+  </Accordion>
+  
+  <Accordion title="Technical Voices">
+    **Best for**: Tech support, software companies
+    - Clear technical pronunciation
+    - Patient and helpful tone
+    - Good for complex explanations
+    - Popular with B2B companies
+  </Accordion>
+</AccordionGroup>
+
+## Step 3: Define Agent Behavior
+
+### General Prompt Configuration
+
+The general prompt is the foundation of your agent's personality and behavior. It should include:
+
+<Steps>
+  <Step title="Role Definition">
+    Define what role the agent plays in your organization
+    
+    ```text
+    "You are a professional customer service representative for [Company Name]. 
+    Your role is to help customers with inquiries, provide information about 
+    our services, and ensure a positive customer experience."
+    ```
+  </Step>
+  
+  <Step title="Personality Guidelines">
+    Establish the agent's communication style
+    
+    ```text
+    "Always be polite, professional, and helpful. Use a friendly but 
+    professional tone. If you don't know something, admit it honestly 
+    and offer to find the answer or connect them with someone who can help."
+    ```
+  </Step>
+  
+  <Step title="Specific Instructions">
+    Include specific behaviors and responses
+    
+    ```text
+    "Always ask for the caller's name at the beginning of the conversation. 
+    If someone asks about pricing, provide the basic information and offer 
+    to schedule a consultation for detailed quotes."
+    ```
+  </Step>
+  
+  <Step title="Escalation Rules">
+    Define when and how to escalate calls
+    
+    ```text
+    "If a customer is upset or you cannot resolve their issue after 
+    2 attempts, offer to transfer them to a human agent or take a detailed 
+    message for follow-up within 24 hours."
+    ```
+  </Step>
+</Steps>
+
+### Advanced Prompt Examples
+
+<Tabs>
+  <Tab title="Customer Support">
+    ```text
+    You are a helpful customer support representative for TechCorp. 
+    
+    Your responsibilities:
+    - Answer questions about our software products
+    - Help troubleshoot basic technical issues
+    - Process refund and cancellation requests
+    - Schedule technical support appointments
+    
+    Your personality:
+    - Professional but friendly
+    - Patient and understanding
+    - Solution-oriented
+    - Empathetic to customer frustrations
+    
+    Important guidelines:
+    - Always ask for the customer's name and account information
+    - If you can't solve an issue, escalate to Level 2 support
+    - For billing issues, transfer directly to the billing department
+    - Always confirm next steps before ending the call
+    ```
+  </Tab>
+  
+  <Tab title="Sales Agent">
+    ```text
+    You are a sales representative for HomeServices Plus, specializing 
+    in home improvement consultations.
+    
+    Your goal:
+    - Qualify potential leads
+    - Schedule in-home consultations
+    - Provide basic service information
+    - Capture contact details for follow-up
+    
+    Qualification questions to ask:
+    - What type of home improvement are you considering?
+    - What's your estimated timeline for this project?
+    - Have you worked with contractors before?
+    - What's your approximate budget range?
+    
+    Closing approach:
+    - Always try to schedule a consultation
+    - Emphasize our free estimates
+    - Mention our 25 years of experience
+    - Provide consultation availability within 48 hours
+    ```
+  </Tab>
+  
+  <Tab title="Appointment Scheduler">
+    ```text
+    You are the appointment scheduler for Dr. Smith's Dental Practice.
+    
+    Your main functions:
+    - Schedule new patient appointments
+    - Handle appointment changes and cancellations
+    - Provide practice information and directions
+    - Remind patients of appointment requirements
+    
+    Scheduling guidelines:
+    - New patients need 60-minute slots
+    - Existing patients typically need 30-minute slots
+    - We're closed weekends and major holidays
+    - Ask about insurance before scheduling
+    - Confirm contact information for reminders
+    
+    Office hours: Monday-Friday, 8 AM to 6 PM
+    Location: 123 Main Street, Downtown
+    Phone: (555) 123-4567
+    ```
+  </Tab>
+</Tabs>
+
+## Step 4: Voice and Language Settings
+
+### Language Configuration
+
+<CardGroup cols={2}>
+  <Card title="Primary Languages" icon="globe">
+    - **English** (US, UK, AU)
+    - **Spanish** (Latin America, Spain)
+    - **French** (France, Canada)
+    - **German**
+    - **Italian**
+    - **Portuguese**
+  </Card>
+  <Card title="Advanced Options" icon="settings">
+    - **Accent Selection**: Choose regional accents
+    - **Speaking Speed**: Adjust words per minute
+    - **Voice Pitch**: Modify tone characteristics
+    - **Pause Duration**: Control natural pauses
+  </Card>
+</CardGroup>
+
+### Voice Parameters
+
+```javascript
+// Example voice configuration
+{
+  "voice_id": "en-US-professional-female",
+  "speed": 1.0,        // Normal speed (0.5-2.0)
+  "pitch": 0.0,        // Normal pitch (-10 to +10)
+  "volume": 1.0,       // Normal volume (0.1-2.0)
+  "stability": 0.75,   // Voice consistency (0-1)
+  "similarity": 0.75   // Voice similarity (0-1)
+}
+```
+
+## Step 5: Integration Setup
+
+### Knowledge Base Connection
+
+Connect your agent to relevant knowledge sources:
+
+<Steps>
+  <Step title="Select Knowledge Base">
+    Choose which knowledge bases your agent should access
+  </Step>
+  <Step title="Set Permissions">
+    Define what information the agent can access and share
+  </Step>
+  <Step title="Configure Search">
+    Set up how the agent searches and retrieves information
+  </Step>
+</Steps>
+
+### External Integrations
+
+<AccordionGroup>
+  <Accordion title="Calendar Integration">
+    **Supported Platforms**:
+    - Google Calendar
+    - Microsoft Outlook
+    - Calendly
+    - Acuity Scheduling
+    
+    **Setup**: Connect via API key or OAuth authentication
+  </Accordion>
+  
+  <Accordion title="CRM Integration">
+    **Supported Platforms**:
+    - Salesforce
+    - HubSpot
+    - Pipedrive
+    - Custom CRM via API
+    
+    **Features**: Automatic lead creation, contact updates, activity logging
+  </Accordion>
+  
+  <Accordion title="Communication Tools">
+    **Supported Platforms**:
+    - Slack notifications
+    - Microsoft Teams alerts
+    - Email notifications
+    - SMS alerts
+    
+    **Use Cases**: Alert staff about important calls, escalations, appointments
+  </Accordion>
+</AccordionGroup>
+
+## Step 6: Testing and Validation
+
+Before activating your agent, thorough testing is crucial:
+
+### Test Call Process
+
+<Steps>
+  <Step title="Initial Test">
+    Use the "Test Call" feature in the dashboard to make a test call to your agent
+  </Step>
+  <Step title="Scenario Testing">
+    Test various customer scenarios and edge cases
+  </Step>
+  <Step title="Voice Quality Check">
+    Verify voice clarity, speed, and natural flow
+  </Step>
+  <Step title="Integration Testing">
+    Confirm all integrations (calendar, CRM) are working properly
+  </Step>
+</Steps>
+
+### Test Scenarios Checklist
+
+<Tabs>
+  <Tab title="Basic Interactions">
+    - [ ] Agent answers promptly
+    - [ ] Greeting is appropriate
+    - [ ] Agent asks for caller's name
+    - [ ] Voice quality is clear
+    - [ ] Response time is reasonable
+  </Tab>
+  
+  <Tab title="Information Requests">
+    - [ ] Agent provides accurate business hours
+    - [ ] Location and directions are correct
+    - [ ] Service information is up-to-date
+    - [ ] Pricing information is accurate
+    - [ ] FAQ responses are helpful
+  </Tab>
+  
+  <Tab title="Complex Scenarios">
+    - [ ] Escalation process works correctly
+    - [ ] Agent handles angry customers appropriately
+    - [ ] Multiple topic conversations flow naturally
+    - [ ] Technical issues are handled properly
+    - [ ] Follow-up actions are confirmed
+  </Tab>
+</Tabs>
+
+## Step 7: Going Live
+
+Once testing is complete, activate your agent:
+
+1. **Final Review**: Double-check all configurations
+2. **Set Status to Active**: Change agent status from "Training" to "Active"
+3. **Monitor Initial Calls**: Watch the first few calls closely
+4. **Collect Feedback**: Gather feedback from initial callers
+5. **Iterate and Improve**: Make adjustments based on real-world performance
+
+<Warning>
+  **Go Live Checklist**:
+  - Agent passes all test scenarios ✓
+  - Voice quality is acceptable ✓
+  - Integrations are working ✓
+  - Escalation procedures are defined ✓
+  - Monitoring system is set up ✓
+</Warning>
+
+## Common Creation Issues
+
+<AccordionGroup>
+  <Accordion title="Agent Creation Fails">
+    **Possible Causes**:
+    - Missing required fields
+    - Invalid prompt formatting
+    - Voice selection not available
+    - Integration connection issues
+    
+    **Solutions**:
+    - Check all required fields are completed
+    - Verify prompt doesn't contain invalid characters
+    - Try a different voice option
+    - Test integrations individually
+  </Accordion>
+  
+  <Accordion title="Voice Quality Issues">
+    **Possible Causes**:
+    - Incorrect voice parameters
+    - Network connectivity issues
+    - Server overload
+    
+    **Solutions**:
+    - Adjust speed and pitch settings
+    - Test from different locations
+    - Try during off-peak hours
+    - Contact support if persistent
+  </Accordion>
+  
+  <Accordion title="Integration Problems">
+    **Possible Causes**:
+    - Invalid API credentials
+    - Insufficient permissions
+    - Service downtime
+    
+    **Solutions**:
+    - Verify API keys are correct
+    - Check service permissions
+    - Test integrations separately
+    - Review integration logs
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+After creating your agent:
+
+<CardGroup cols={2}>
+  <Card
+    title="Agent Management"
+    icon="settings"
+    href="/agents/management"
+  >
+    Learn how to manage and optimize your agents
+  </Card>
+  <Card
+    title="Performance Monitoring"
+    icon="chart-line"
+    href="/features/analytics"
+  >
+    Track your agent's performance and improve over time
+  </Card>
+  <Card
+    title="Advanced Configuration"
+    icon="cog"
+    href="/agents/configuration"
+  >
+    Explore advanced settings and customization options
+  </Card>
+  <Card
+    title="Integration Setup"
+    icon="plug"
+    href="/advanced/integrations"
+  >
+    Connect your agents with business tools and workflows
+  </Card>
+</CardGroup>

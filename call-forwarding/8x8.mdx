@@ -1,0 +1,378 @@
+---
+title: "How to Forward Calls from 8x8 to Recepta AI"
+description: "Complete guide to forwarding your 8x8 calls to Recepta AI Voice Agent"
+---
+
+## Overview
+
+8x8 customers can set up call forwarding to enable your Recepta AI voice agent to answer incoming calls. This guide walks you through the complete setup process, from obtaining your Recepta AI phone number to configuring 8x8's call forwarding rules.
+
+## Getting Your Recepta AI Phone Number
+
+Before configuring 8x8, you'll need to obtain your dedicated Recepta AI phone number.
+
+<Steps>
+  <Step title="Access Your Dashboard">
+    Navigate to your Recepta AI dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
+  </Step>
+
+  <Step title="Locate Your Phone Number">
+    Your Recepta AI phone number will be displayed prominently in the dashboard. Copy this number as you'll need it for the 8x8 configuration.
+
+    <img src="/images/phonenumber.png" alt="Recepta AI Phone Number Location" />
+  </Step>
+
+  <Step title="Complete Agent Setup">
+    Ensure you have completed setting up your AI voice agent's call instructions and configuration before proceeding with call forwarding.
+  </Step>
+</Steps>
+
+<Note>
+Keep your Recepta AI phone number handy - you'll need to enter it into 8x8's forwarding settings.
+</Note>
+
+---
+
+## Configuring Call Forwarding in 8x8
+
+8x8's interface may change over time. For the most current instructions, we recommend consulting 8x8's official documentation. The general configuration process follows these steps:
+
+### Setup Instructions
+
+<Steps>
+  <Step title="Log into 8x8 Portal">
+    Access your 8x8 account through their web portal
+  </Step>
+
+  <Step title="Navigate to Settings">
+    Go to **Settings** → **Account Settings**
+  </Step>
+
+  <Step title="Access Call Forwarding Rules">
+    Select **Call Forwarding Rules** and click the **edit icon**
+  </Step>
+
+  <Step title="Enter Recepta AI Number">
+    In the **Select target** field, enter your Recepta AI phone number. The system will recognize it as an external number.
+  </Step>
+
+  <Step title="Save Configuration">
+    Save changes at both the rule level and the page level to ensure your settings are properly applied.
+  </Step>
+
+  <Step title="Test Your Setup">
+    Make a test call to verify calls are routing correctly to your Recepta AI voice agent.
+  </Step>
+</Steps>
+
+---
+
+## Call Forwarding Strategies
+
+Choose the strategy that best fits your business needs:
+
+<Accordion title="Direct Forwarding (24/7 AI Coverage)">
+  **Best for**: Businesses wanting complete AI automation
+
+  **Setup**: Forward all calls directly to Recepta AI phone number
+
+  **Benefits**:
+  - No missed calls
+  - Consistent service 24/7
+  - Reduced operational costs
+  - Instant call pickup
+</Accordion>
+
+<Accordion title="Sequential Routing (Team First, AI Backup)">
+  **Best for**: Businesses preferring human touch with AI backup
+
+  **Setup**: Ring team for 5-10 seconds, then forward to Recepta AI
+
+  **Benefits**:
+  - Prioritize human interaction
+  - AI handles overflow and after-hours
+  - No calls go to voicemail
+  - Flexible coverage
+
+  <Warning>
+  Keep ring times under 10 seconds maximum. Many callers will hang up if they wait too long.
+  </Warning>
+</Accordion>
+
+<Accordion title="Business Hours Based (Time-Sensitive Routing)">
+  **Best for**: Businesses with defined operating hours
+
+  **Setup**: Different routing for business hours vs after-hours
+
+  **Benefits**:
+  - Optimize for different times
+  - Cost-effective coverage
+  - Flexible scheduling
+  - Custom holiday routing
+</Accordion>
+
+---
+
+## Important Configuration Tips
+
+### Ring Time Management
+
+<Warning>
+**Critical**: Do not allow more than 10 seconds ring time before forwarding to Recepta AI.
+
+Many callers will hang up if they wait too long, defeating the purpose of having AI coverage.
+</Warning>
+
+If you choose to ring your personal cell phone before falling back to Recepta AI:
+
+- **Maximum Ring Time**: 5-8 seconds (10 seconds absolute maximum)
+- **Sequential Mode**: Ensure phones ring one after another, not simultaneously
+- **Test Thoroughly**: Make multiple test calls to verify timing
+
+### Preventing Infinite Call Loops
+
+<Warning>
+**Avoid Infinite Loops**: If your Recepta AI agent has you as a transfer destination, the transfer number **must be different** from your main 8x8 number.
+</Warning>
+
+**Safe Configuration Example**:
+- Main 8x8 Number: Forwards to Recepta AI → ✅ Correct
+- AI Agent Transfer Destination: Your direct cell phone → ✅ Correct
+- ❌ **WRONG**: AI transfers back to main 8x8 number (creates loop)
+
+---
+
+## Advanced Configuration Options
+
+### Business Hours Routing
+
+Configure different routing rules based on your business hours:
+
+<CardGroup cols={2}>
+  <Card title="During Business Hours" icon="sun">
+    Route to your team first, then overflow to Recepta AI for busy or unanswered calls
+  </Card>
+
+  <Card title="After Hours" icon="moon">
+    Route all calls directly to Recepta AI for 24/7 coverage
+  </Card>
+
+  <Card title="Holidays" icon="calendar-xmark">
+    Set special routing rules for holidays and special occasions
+  </Card>
+
+  <Card title="Peak Times" icon="chart-line-up">
+    Use Recepta AI during high-volume periods to ensure no calls are missed
+  </Card>
+</CardGroup>
+
+### Multi-Level Routing Strategy
+
+For businesses that want a hybrid approach:
+
+<Steps>
+  <Step title="Primary Reception">
+    Ring main reception desk for 5 seconds
+  </Step>
+
+  <Step title="Team Queue">
+    If unanswered, ring available team members for 5 seconds
+  </Step>
+
+  <Step title="AI Fallback">
+    Finally forward to Recepta AI to ensure no calls are missed
+  </Step>
+</Steps>
+
+---
+
+## Testing Your Configuration
+
+Thorough testing ensures your setup works correctly in all scenarios:
+
+<Steps>
+  <Step title="Test Basic Forwarding">
+    Call your 8x8 number to verify it forwards to Recepta AI
+  </Step>
+
+  <Step title="Test Business Hours">
+    If configured, test during and outside business hours
+  </Step>
+
+  <Step title="Test Sequential Routing">
+    If using sequential routing, verify proper fallback timing
+  </Step>
+
+  <Step title="Test Call Transfers">
+    Verify AI agent transfers work without creating loops
+  </Step>
+
+  <Step title="Review Call Logs">
+    Check logs in both 8x8 and Recepta AI dashboards
+  </Step>
+</Steps>
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Calls Not Reaching Recepta AI">
+    **Diagnostic Steps**:
+    - Verify correct Recepta AI phone number is entered in 8x8
+    - Check that call forwarding rule is enabled and active
+    - Ensure your Recepta AI agent is configured and active
+    - Review 8x8's call flow settings
+    - Make test call and review logs in both systems
+
+    **Common Causes**:
+    - Typo in Recepta AI phone number
+    - Forwarding rule not saved properly
+    - Conflicting call handling rules
+    - AI agent not active
+  </Accordion>
+
+  <Accordion title="Calls Going to Voicemail">
+    **Solutions**:
+    - Reduce ring time before forwarding (max 10 seconds)
+    - Ensure Recepta AI is set as primary forwarding destination
+    - Disable or extend voicemail delay in 8x8 settings
+    - Check that forwarding rule takes precedence over voicemail
+
+    **Best Practice**:
+    Set ring time to 5-8 seconds to ensure AI pickup before voicemail
+  </Accordion>
+
+  <Accordion title="Infinite Call Loops">
+    **Solutions**:
+    - Use different phone numbers for transfers
+    - Never forward 8x8 number to itself
+    - Configure AI transfers to direct lines (cell/desk phones)
+    - Review complete call flow logic
+    - Document your routing to avoid loops
+
+    **Example Safe Setup**:
+    ```
+    Caller → 8x8 Main → Recepta AI → Transfer to Cell Phone
+    (Each step uses a different number)
+    ```
+  </Accordion>
+
+  <Accordion title="Call Quality Issues">
+    **Solutions**:
+    - Verify stable internet connection
+    - Check 8x8's system status page
+    - Review call logs in both 8x8 and Recepta AI dashboards
+    - Contact Recepta AI support if issues persist
+    - Test from different phone numbers/locations
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Monitoring and Analytics
+
+### Tracking Performance
+
+<CardGroup cols={2}>
+  <Card title="8x8 Analytics" icon="chart-line">
+    Monitor call volume, routing patterns, and forwarding statistics
+  </Card>
+
+  <Card title="Recepta AI Dashboard" icon="gauge-high" href="/features/analytics">
+    Track AI performance, conversation quality, and outcomes
+  </Card>
+
+  <Card title="Call Logs" icon="rectangle-list" href="/features/call-logs">
+    Review detailed logs from both systems to identify issues
+  </Card>
+
+  <Card title="Quality Metrics" icon="star">
+    Measure customer satisfaction and agent performance
+  </Card>
+</CardGroup>
+
+### Key Metrics to Monitor
+
+- **Call Answer Rate**: Percentage of calls successfully handled
+- **Average Wait Time**: Time before AI picks up
+- **Transfer Rate**: How often AI transfers to humans
+- **Call Duration**: Length of AI conversations
+- **Customer Satisfaction**: Ratings and feedback
+- **Cost Savings**: Compare to previous solution
+
+---
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Minimize Wait Time" icon="clock-rotate-left">
+    Keep ring times under 10 seconds to reduce caller drop-off
+  </Card>
+
+  <Card title="Test Regularly" icon="vial-circle-check">
+    Test your setup monthly to catch configuration changes
+  </Card>
+
+  <Card title="Configure Holidays" icon="calendar-day">
+    Set up special routing for holidays and special events
+  </Card>
+
+  <Card title="Monitor Analytics" icon="chart-mixed">
+    Review performance weekly to identify issues early
+  </Card>
+
+  <Card title="Update AI Knowledge" icon="brain">
+    Keep your AI agent's knowledge base current
+  </Card>
+
+  <Card title="Document Setup" icon="file-lines">
+    Keep records of your configuration for troubleshooting
+  </Card>
+</CardGroup>
+
+---
+
+## Next Steps
+
+After configuring call forwarding:
+
+<CardGroup cols={2}>
+  <Card title="Configure Your Agent" icon="robot" href="/agents/configuration">
+    Customize your AI agent's responses and behavior
+  </Card>
+
+  <Card title="Set Up Transfers" icon="right-left" href="/features/call-management">
+    Configure call transfer destinations and rules
+  </Card>
+
+  <Card title="Add Knowledge Base" icon="book-open-reader" href="/features/knowledge-base">
+    Train your AI agent with company-specific information
+  </Card>
+
+  <Card title="View Analytics" icon="chart-pie" href="/features/analytics">
+    Monitor performance and optimize call handling
+  </Card>
+</CardGroup>
+
+---
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Email Support" icon="envelope" href="mailto:support@recepta.ai">
+    Contact our support team at support@recepta.ai
+  </Card>
+
+  <Card title="8x8 Support" icon="life-ring" href="https://support.8x8.com">
+    Visit 8x8's support for platform-specific questions
+  </Card>
+
+  <Card title="Schedule Demo" icon="calendar-check" href="https://recepta.ai/demo">
+    Book a personalized walkthrough with our team
+  </Card>
+
+  <Card title="Documentation" icon="book-bookmark" href="/index">
+    Browse our comprehensive documentation
+  </Card>
+</CardGroup>

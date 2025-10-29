@@ -1,0 +1,330 @@
+---
+title: "Chat Widget Overview"
+description: "Embed intelligent chat widgets on your website"
+icon: "message-circle"
+---
+
+## What is the Chat Widget?
+
+The Recepta AI Chat Widget is an embeddable, intelligent chat interface that you can add to any website. It provides instant customer support and engagement through AI-powered conversations, using the same advanced technology as our voice agents.
+
+<CardGroup cols={2}>
+  <Card title="Instant Deployment" icon="rocket">
+    Add to any website with a single line of code
+  </Card>
+  <Card title="AI-Powered" icon="brain">
+    Uses the same intelligent AI as your voice agents
+  </Card>
+  <Card title="Fully Customizable" icon="palette">
+    Match your brand colors, position, and styling
+  </Card>
+  <Card title="No Domain Restrictions" icon="globe">
+    Works on any domain without CORS issues
+  </Card>
+</CardGroup>
+
+## How the Chat Widget Works
+
+The chat widget integrates seamlessly with your website and connects directly to AI chat API, providing real-time conversational AI capabilities.
+
+<Steps>
+  <Step title="Website Integration">
+    Add the embed code to your website's HTML. The widget loads asynchronously without affecting page performance.
+  </Step>
+  <Step title="User Interaction">
+    Visitors click the chat button to open the conversation interface and start chatting immediately.
+  </Step>
+  <Step title="AI Processing">
+    Messages are processed by the same AI engine that powers your voice agents, ensuring consistent responses.
+  </Step>
+  <Step title="Real-time Responses">
+    The AI responds instantly with contextually appropriate answers based on your business knowledge.
+  </Step>
+</Steps>
+
+## Key Features
+
+### Intelligent Conversations
+- **Natural Language Understanding**: Comprehends customer intent and context
+- **Multi-turn Conversations**: Maintains conversation history and context
+- **Knowledge Base Integration**: Accesses your business information and FAQs
+- **Sentiment Analysis**: Adapts responses based on customer mood
+
+### Customization Options
+- **Brand Colors**: Match your website's color scheme
+- **Position Control**: Place bottom-right or bottom-left
+- **Custom Titles**: Set personalized greeting messages
+- **Sizing Options**: Responsive design for all screen sizes
+
+### Technical Benefits
+- **Lightweight**: Minimal impact on page load times
+- **Secure**: All conversations are encrypted
+- **Reliable**: 99.9% uptime with global CDN
+- **GDPR Compliant**: Privacy-focused data handling
+
+## Widget States and Behavior
+
+<AccordionGroup>
+  <Accordion title="Minimized State">
+    **Appearance**: Small floating button in corner
+    - Customizable icon (default: message bubble)
+    - Subtle animations to attract attention
+    - Badge showing unread messages (if applicable)
+    - Hover effects for better UX
+  </Accordion>
+  
+  <Accordion title="Expanded State">
+    **Appearance**: Full chat interface
+    - Chat history with message bubbles
+    - Typing indicators during AI responses
+    - Quick reply buttons for common actions
+    - Emoji support and formatting
+  </Accordion>
+  
+  <Accordion title="Conversation Flow">
+    **Behavior**: Intelligent conversation management
+    - Automatic greeting when opened
+    - Context awareness across messages
+    - Escalation to human agents when needed
+    - Session persistence during page navigation
+  </Accordion>
+</AccordionGroup>
+
+## Widget Configuration Options
+
+### Visual Customization
+
+```javascript
+// Example widget configuration
+{
+  "title": "Chat with us",
+  "primaryColor": "#667EEA",
+  "position": "bottom-right",
+  "greeting": "Hello! How can I help you today?",
+  "placeholder": "Type your message...",
+  "avatar": "https://yourdomain.com/avatar.png"
+}
+```
+
+<CardGroup cols={2}>
+  <Card title="Colors & Branding" icon="palette">
+    - **Primary Color**: Main accent color
+    - **Background Color**: Chat interface background
+    - **Text Color**: Message text color
+    - **Button Colors**: Action button styling
+  </Card>
+  <Card title="Positioning & Layout" icon="layout">
+    - **Position**: Bottom-right or bottom-left
+    - **Margin**: Distance from screen edges
+    - **Size**: Compact, normal, or large
+    - **Z-index**: Layer positioning
+  </Card>
+</CardGroup>
+
+### Behavioral Settings
+
+<Tabs>
+  <Tab title="Greeting Settings">
+    ```javascript
+    {
+      "autoGreeting": true,
+      "greetingDelay": 3000, // 3 seconds
+      "greetingMessage": "Hi there! Need help finding something?",
+      "showGreetingBadge": true
+    }
+    ```
+  </Tab>
+  
+  <Tab title="Conversation Settings">
+    ```javascript
+    {
+      "maxMessageLength": 1000,
+      "typingIndicator": true,
+      "responseDelay": 500, // Simulated thinking time
+      "sessionTimeout": 1800000 // 30 minutes
+    }
+    ```
+  </Tab>
+  
+  <Tab title="Integration Settings">
+    ```javascript
+    {
+      "leadCapture": true,
+      "emailCollection": "optional", // required, optional, never
+      "transcriptEmail": true,
+      "crmIntegration": "enabled"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Use Cases and Applications
+
+### E-commerce Websites
+- **Product Questions**: Help customers find products and compare options
+- **Order Support**: Assist with order status, returns, and exchanges
+- **Size & Fit**: Guide customers on product specifications
+- **Checkout Assistance**: Help complete purchases and resolve cart issues
+
+```javascript
+// E-commerce widget example
+{
+  "title": "Need help shopping?",
+  "primaryColor": "#FF6B6B",
+  "quickReplies": [
+    "Track my order",
+    "Return policy",
+    "Size guide",
+    "Contact support"
+  ]
+}
+```
+
+### Service Businesses
+- **Appointment Booking**: Schedule consultations and service calls
+- **Service Information**: Explain offerings and pricing
+- **Quote Requests**: Collect information for estimates
+- **Location & Hours**: Provide business information
+
+```javascript
+// Service business widget example
+{
+  "title": "Book a consultation",
+  "primaryColor": "#4ECDC4",
+  "leadCapture": true,
+  "calendarIntegration": true
+}
+```
+
+### SaaS Platforms
+- **Feature Questions**: Help users understand product capabilities
+- **Technical Support**: Troubleshoot common issues
+- **Onboarding Help**: Guide new users through setup
+- **Billing Support**: Handle subscription and payment questions
+
+```javascript
+// SaaS widget example
+{
+  "title": "Get instant help",
+  "primaryColor": "#45B7D1",
+  "knowledgeBase": "help_docs",
+  "escalateToHuman": true
+}
+```
+
+## Performance and Analytics
+
+### Metrics Tracking
+The chat widget automatically tracks important metrics:
+
+<CardGroup cols={2}>
+  <Card title="Usage Metrics" icon="chart-bar">
+    - **Conversations Started**: Daily/monthly counts
+    - **Message Volume**: Total messages exchanged
+    - **Session Duration**: Average conversation length
+    - **Return Visitors**: Users who chat multiple times
+  </Card>
+  <Card title="Quality Metrics" icon="star">
+    - **Resolution Rate**: Conversations resolved without escalation
+    - **Customer Satisfaction**: Post-chat ratings
+    - **Response Time**: Average AI response speed
+    - **Escalation Rate**: Conversations transferred to humans
+  </Card>
+</CardGroup>
+
+### A/B Testing Capabilities
+Test different configurations to optimize performance:
+
+- **Color Variations**: Test different primary colors
+- **Position Testing**: Compare bottom-right vs bottom-left
+- **Greeting Messages**: Try different opening lines
+- **Timing Experiments**: Test auto-greeting delays
+
+## Technical Implementation
+
+### Embed Code Structure
+```html
+<!-- Recepta AI Chat Widget -->
+<script>
+  (function(r,e,c,e,p,t,a){
+    r.ReceptaAI=r.ReceptaAI||function(){
+      (r.ReceptaAI.q=r.ReceptaAI.q||[]).push(arguments)
+    };
+    r.ReceptaAI.l=1*new Date();
+    a=e.createElement(c);
+    t=e.getElementsByTagName(c)[0];
+    a.async=1;
+    a.src=p;
+    t.parentNode.insertBefore(a,t)
+  })(window,document,'script','https://widget.recepta.ai/v1/widget.js');
+  
+  ReceptaAI('init', {
+    widgetId: 'your-widget-id',
+    title: 'Chat with us',
+    primaryColor: '#667EEA',
+    position: 'bottom-right'
+  });
+</script>
+```
+
+### Security Features
+- **Data Encryption**: All conversations encrypted in transit
+- **Privacy Controls**: GDPR and CCPA compliant
+- **Domain Validation**: Optional domain restrictions
+- **Rate Limiting**: Prevents spam and abuse
+
+## Browser Support
+
+<CardGroup cols={2}>
+  <Card title="Desktop Browsers" icon="desktop">
+    - **Chrome**: Version 60+
+    - **Firefox**: Version 55+
+    - **Safari**: Version 11+
+    - **Edge**: Version 16+
+  </Card>
+  <Card title="Mobile Browsers" icon="mobile">
+    - **iOS Safari**: Version 11+
+    - **Chrome Mobile**: Version 60+
+    - **Firefox Mobile**: Version 55+
+    - **Samsung Internet**: Version 7+
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+Ready to add a chat widget to your website?
+
+<CardGroup cols={2}>
+  <Card
+    title="Set Up Your Widget"
+    icon="settings"
+    href="/chat-widget/setup"
+  >
+    Create and configure your first chat widget
+  </Card>
+  <Card
+    title="Customization Guide"
+    icon="palette"
+    href="/chat-widget/customization"
+  >
+    Learn how to customize colors, position, and behavior
+  </Card>
+  <Card
+    title="Integration Tutorial"
+    icon="code"
+    href="/chat-widget/integration"
+  >
+    Step-by-step integration guide for developers
+  </Card>
+  <Card
+    title="Best Practices"
+    icon="lightbulb"
+    href="/chat-widget/best-practices"
+  >
+    Tips for maximizing chat widget effectiveness
+  </Card>
+</CardGroup>
+
+<Note>
+  The chat widget uses the same AI intelligence as your voice agents, ensuring consistent customer experiences across all touchpoints.
+</Note>

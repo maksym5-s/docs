@@ -1,0 +1,200 @@
+---
+title: "Chat Widget Integration"
+description: "Integrate chat widgets into your website with embed codes and advanced implementation options"
+---
+
+## Overview
+
+Chat widget integration allows you to seamlessly embed AI-powered chat functionality into your website using generated embed codes and advanced integration methods.
+
+## Embed Code Integration
+
+### Standard Integration
+Based on the platform implementation, the chat widget provides:
+
+<CardGroup cols={2}>
+  <Card title="JavaScript Embed" icon="code">
+    - **Automatic Generation**: Platform generates embed code
+    - **Script Tag**: Standard HTML script implementation
+    - **Async Loading**: Non-blocking widget loading
+    - **Copy-Paste Ready**: Ready-to-use code snippets
+  </Card>
+  <Card title="Custom Configuration" icon="settings">
+    - **Widget Title**: Customizable chat header
+    - **Primary Color**: Brand color integration
+    - **Position Settings**: Bottom-right or bottom-left
+    - **Responsive Design**: Automatic mobile adaptation
+  </Card>
+</CardGroup>
+
+### Implementation Steps
+1. **Configure Widget**: Set title, color, and position in the platform
+2. **Generate Code**: Platform automatically creates embed code
+3. **Copy Embed Code**: Get the generated JavaScript code
+4. **Add to Website**: Paste code before closing `</body>` tag
+5. **Test Integration**: Verify widget appears and functions correctly
+
+## Embed Code Structure
+
+### Generated Script
+The platform generates embed code similar to:
+```html
+<script>
+  (function() {
+    var script = document.createElement('script');
+    script.src = 'https://your-domain.com/widget/script.js';
+    script.async = true;
+    script.setAttribute('data-widget-id', 'your-widget-id');
+    script.setAttribute('data-title', 'Chat with us');
+    script.setAttribute('data-color', '#667EEA');
+    script.setAttribute('data-position', 'bottom-right');
+    document.head.appendChild(script);
+  })();
+</script>
+```
+
+### Configuration Parameters
+- **Widget ID**: Unique identifier for your chat widget
+- **Title**: Custom title displayed in chat header
+- **Color**: Primary color theme for the widget
+- **Position**: Widget placement (bottom-right/bottom-left)
+
+## Advanced Integration Options
+
+### Custom Implementation
+For advanced users, the platform supports:
+- **API Integration**: Direct integration via REST APIs
+- **Webhook Configuration**: Real-time event notifications
+- **Custom Styling**: Override default CSS styling
+- **Event Handling**: Custom JavaScript event management
+
+### Multiple Website Support
+- **Different Configurations**: Unique widgets for different sites
+- **Domain Management**: Configure widgets per domain
+- **Environment Settings**: Separate development and production widgets
+- **Version Control**: Manage different widget versions
+
+## Website Integration Best Practices
+
+### Placement Guidelines
+**Optimal Locations:**
+- **Before `</body>`**: Recommended placement for best performance
+- **Footer Sections**: Alternative placement in website footer
+- **Template Files**: Add to global template for site-wide deployment
+- **Page-Specific**: Add to specific pages as needed
+
+### Performance Considerations
+- **Async Loading**: Widgets load without blocking page rendering
+- **Lazy Loading**: Widget initializes when needed
+- **Minimal Impact**: Optimized to minimize effect on site speed
+- **CDN Delivery**: Fast loading from content delivery networks
+
+## Integration Testing
+
+### Verification Steps
+After integration, verify:
+- **Widget Appearance**: Confirm widget displays correctly
+- **Positioning**: Check widget placement matches configuration
+- **Functionality**: Test chat functionality and responses
+- **Mobile Compatibility**: Verify mobile device compatibility
+- **Browser Testing**: Test across different browsers
+
+### Troubleshooting Common Issues
+**Widget Not Appearing:**
+- Check embed code placement
+- Verify script URL accessibility
+- Confirm widget configuration
+
+**Styling Issues:**
+- Check for CSS conflicts
+- Verify custom styling implementation
+- Test responsive behavior
+
+## CMS and Platform Integration
+
+### Popular Platform Support
+The widget integrates with:
+
+<CardGroup cols={3}>
+  <Card title="WordPress" icon="wordpress">
+    - Plugin compatibility
+    - Theme integration
+    - Custom post types
+    - Widget areas
+  </Card>
+  <Card title="Shopify" icon="shopping-cart">
+    - E-commerce integration
+    - Product page widgets
+    - Checkout support
+    - Theme compatibility
+  </Card>
+  <Card title="Custom Sites" icon="code">
+    - HTML/CSS integration
+    - JavaScript frameworks
+    - Single page applications
+    - Progressive web apps
+  </Card>
+</CardGroup>
+
+### Implementation Methods
+- **Direct Code**: Paste embed code directly into HTML
+- **Plugin Integration**: Use platform-specific plugins where available
+- **Template Modification**: Add to website template files
+- **Tag Manager**: Deploy via Google Tag Manager or similar tools
+
+## Analytics and Tracking
+
+### Integration Tracking
+Monitor widget integration with:
+- **Load Analytics**: Track widget loading performance
+- **Engagement Metrics**: Monitor chat interactions
+- **Conversion Tracking**: Measure business impact
+- **Error Monitoring**: Track integration issues
+
+### Google Analytics Integration
+- **Event Tracking**: Track chat widget interactions
+- **Goal Configuration**: Set up conversion goals
+- **Custom Dimensions**: Add chat data to analytics
+- **E-commerce Tracking**: Track chat-driven sales
+
+## Security Considerations
+
+### Safe Integration
+- **HTTPS Requirement**: Secure connection for widget loading
+- **Content Security Policy**: Configure CSP headers appropriately
+- **Domain Validation**: Widget validates against configured domains
+- **Data Encryption**: All chat data transmitted securely
+
+### Privacy Compliance
+- **GDPR Compliance**: Built-in privacy controls
+- **Cookie Management**: Minimal cookie usage
+- **Data Retention**: Configurable data retention policies
+- **User Consent**: Integration with consent management platforms
+
+## Maintenance and Updates
+
+### Automatic Updates
+- **Seamless Updates**: Widget updates without code changes
+- **Backward Compatibility**: Maintains compatibility with existing integrations
+- **Feature Rollout**: Gradual feature deployment
+- **Monitoring**: Automatic health checks and monitoring
+
+### Version Management
+- **Stable Releases**: Production-ready widget versions
+- **Beta Testing**: Optional beta feature access
+- **Rollback Capability**: Revert to previous versions if needed
+- **Change Notifications**: Alerts for significant updates
+
+## Support and Documentation
+
+### Integration Support
+- **Technical Documentation**: Comprehensive integration guides
+- **Code Examples**: Sample implementations for different platforms
+- **Video Tutorials**: Step-by-step integration walkthroughs
+- **Support Team**: Technical support for integration issues
+
+### Community Resources
+- **Developer Forum**: Community support and discussions
+- **Code Samples**: Shared integration examples
+- **Best Practices**: Community-driven optimization tips
+- **Issue Tracking**: Report and track integration problems
