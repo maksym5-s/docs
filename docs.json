@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Recepta AI Voice Agent SaaS",
+  "name": "Recepta.ai Voice Agent SaaS",
   "colors": {
     "primary": "#667EEA",
     "light": "#9CA3F4",
@@ -116,8 +116,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png"
   },
   "navbar": {
     "links": [

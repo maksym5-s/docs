@@ -1,37 +1,37 @@
 ---
-title: "How to Forward Calls from CallRail to Recepta AI"
-description: "Complete guide to forwarding your CallRail tracking numbers to Recepta AI Voice Agent"
+title: "How to Forward Calls from CallRail to Recepta.ai"
+description: "Complete guide to forwarding your CallRail tracking numbers to Recepta.ai Voice Agent"
 ---
 
 ## Overview
 
-This guide will help you configure call forwarding from your CallRail tracking numbers to Recepta AI, enabling your AI voice agent to answer incoming calls. CallRail customers can forward individual tracking numbers or set up call flows to route calls to Recepta AI.
+This guide will help you configure call forwarding from your CallRail tracking numbers to Recepta.ai, enabling your AI voice agent to answer incoming calls. CallRail customers can forward individual tracking numbers or set up call flows to route calls to Recepta.ai.
 
-## Getting Your Recepta AI Phone Number
+## Getting Your Recepta.ai Phone Number
 
-Before configuring CallRail, you'll need to obtain your dedicated Recepta AI phone number.
+Before configuring CallRail, you'll need to obtain your dedicated Recepta.ai phone number.
 
 <Steps>
   <Step title="Access Your Dashboard">
-    Navigate to your Recepta AI dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
+    Navigate to your Recepta.ai dashboard at [https://recepta.ai/dashboard](https://recepta.ai/dashboard)
   </Step>
 
   <Step title="Locate Your Phone Number">
-    Your Recepta AI phone number will be displayed in the dashboard. Copy this number as you'll need it for the CallRail configuration.
+    Your Recepta.ai phone number will be displayed in the dashboard. Copy this number as you'll need it for the CallRail configuration.
 
-    <img src="/images/phonenumber.png" alt="Recepta AI Phone Number Location" />
+    <img src="/images/phonenumber.png" alt="Recepta.ai Phone Number Location" />
   </Step>
 </Steps>
 
 <Note>
-Make sure you have completed setting up your AI voice agent configuration in Recepta AI before forwarding calls.
+Make sure you have completed setting up your AI voice agent configuration in Recepta.ai before forwarding calls.
 </Note>
 
 ---
 
 ## Method 1: Forward CallRail Tracking Number (Not Assigned to Call Flow)
 
-Use these instructions to forward a tracking number that's **not** assigned to a call flow directly to Recepta AI.
+Use these instructions to forward a tracking number that's **not** assigned to a call flow directly to Recepta.ai.
 
 <Steps>
   <Step title="Open Settings">
@@ -51,7 +51,7 @@ Use these instructions to forward a tracking number that's **not** assigned to a
   </Step>
 
   <Step title="Set Forward Destination">
-    Under **Forward Calls To**, select **Number** and enter your Recepta AI phone number (obtained from your dashboard).
+    Under **Forward Calls To**, select **Number** and enter your Recepta.ai phone number (obtained from your dashboard).
 
     <Warning>
     Your destination number must be a U.S. or Canada number, or in the same country as your tracking number.
@@ -67,7 +67,7 @@ Use these instructions to forward a tracking number that's **not** assigned to a
 
 ## Method 2: Forward Using CallRail Call Flows
 
-If you're using CallRail's Call Flow feature, follow these instructions to route calls through your call flow to Recepta AI.
+If you're using CallRail's Call Flow feature, follow these instructions to route calls through your call flow to Recepta.ai.
 
 ### Setup Instructions
 
@@ -89,15 +89,15 @@ If you're using CallRail's Call Flow feature, follow these instructions to route
   </Step>
 
   <Step title="Configure Call Flow Builder">
-    In your Call Flow Builder, at the point when you want calls forwarded to Recepta AI, use the **Dial** step.
+    In your Call Flow Builder, at the point when you want calls forwarded to Recepta.ai, use the **Dial** step.
 
     <Warning>
-    We recommend **not** using the Round Robin step, as this will not ensure your calls always reach Recepta AI.
+    We recommend **not** using the Round Robin step, as this will not ensure your calls always reach Recepta.ai.
     </Warning>
   </Step>
 
-  <Step title="Enter Recepta AI Number">
-    In the Dial step, enter your Recepta AI phone number as the destination.
+  <Step title="Enter Recepta.ai Number">
+    In the Dial step, enter your Recepta.ai phone number as the destination.
   </Step>
 
   <Step title="Save Call Flow">
@@ -109,7 +109,7 @@ If you're using CallRail's Call Flow feature, follow these instructions to route
 
 <CardGroup cols={2}>
   <Card title="Use Dial Step" icon="phone">
-    Always use the Dial step (not Round Robin) to ensure calls consistently reach Recepta AI.
+    Always use the Dial step (not Round Robin) to ensure calls consistently reach Recepta.ai.
   </Card>
 
   <Card title="Time-Based Routing" icon="clock">
@@ -121,7 +121,7 @@ If you're using CallRail's Call Flow feature, follow these instructions to route
   </Card>
 
   <Card title="Monitor Performance" icon="chart-line">
-    Use both CallRail and Recepta AI analytics to track call performance and quality.
+    Use both CallRail and Recepta.ai analytics to track call performance and quality.
   </Card>
 </CardGroup>
 
@@ -133,18 +133,18 @@ If you're using CallRail's Call Flow feature, follow these instructions to route
 
 You can configure different routing rules based on your business hours:
 
-- **During Business Hours**: Route to your team first, then overflow to Recepta AI
-- **After Hours**: Route all calls directly to Recepta AI
+- **During Business Hours**: Route to your team first, then overflow to Recepta.ai
+- **After Hours**: Route all calls directly to Recepta.ai
 - **Holidays**: Set special routing rules for holidays and special occasions
 
 ### Call Flow Strategies
 
 <Accordion title="Direct Forwarding">
-  All calls immediately forward to Recepta AI. Best for businesses that want 24/7 AI coverage.
+  All calls immediately forward to Recepta.ai. Best for businesses that want 24/7 AI coverage.
 </Accordion>
 
 <Accordion title="Sequential Routing">
-  Calls ring your team first (5-10 seconds), then forward to Recepta AI if unanswered. Minimizes wait time while ensuring no calls are missed.
+  Calls ring your team first (5-10 seconds), then forward to Recepta.ai if unanswered. Minimizes wait time while ensuring no calls are missed.
 </Accordion>
 
 <Accordion title="Time-Based Routing">
@@ -156,18 +156,18 @@ You can configure different routing rules based on your business hours:
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion title="Calls Not Reaching Recepta AI">
-    - Verify you entered the correct Recepta AI phone number
+  <Accordion title="Calls Not Reaching Recepta.ai">
+    - Verify you entered the correct Recepta.ai phone number
     - Check that your CallRail number is active and properly configured
-    - Ensure your Recepta AI agent is set up and active
+    - Ensure your Recepta.ai agent is set up and active
     - Test by calling your CallRail number directly
   </Accordion>
 
   <Accordion title="Call Quality Issues">
     - Verify your internet connection is stable
     - Check CallRail's system status page
-    - Review call logs in both CallRail and Recepta AI dashboards
-    - Contact Recepta AI support if issues persist
+    - Review call logs in both CallRail and Recepta.ai dashboards
+    - Contact Recepta.ai support if issues persist
   </Accordion>
 
   <Accordion title="Call Flow Not Working">
